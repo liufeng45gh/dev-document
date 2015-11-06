@@ -1,0 +1,41 @@
+{
+    "output": null,
+    "generator": "site",
+    "title": null,
+    "description": null,
+    "extension": null,
+    "github": null,
+    "githubHost": "https://github.com/",
+    "plugins": [],
+    "pluginsConfig": {
+        "fontSettings": {
+            "theme": "white",
+            "family": "serif",
+            "size": 1
+        }
+    },
+    "links": {
+    	"sidebar": {
+    	    "Copyright 九合体育 2015": "http://www.9hcom.com"
+    	},
+        "sharing": {
+            "google": null,
+            "facebook": null,
+            "twitter": null,
+            "weibo": null,
+            "all": null
+        }
+    },
+    "pdf": {
+        "toc": true,
+        "pageNumbers": false,
+        "fontSize": 12,
+        "paperSize": "a4",
+        "margin": {
+            "right": 62,
+            "left": 62,
+            "top": 36,
+            "bottom": 36
+        }
+    }
+}
