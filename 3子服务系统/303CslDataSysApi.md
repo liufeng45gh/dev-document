@@ -2,8 +2,7 @@
 * 分页参数：pageNo，pageSize
     * pageNo：对查询数据的页数请求，可选，默认为1
     * pageSize：对每页数据的行数请求，可选，默认为20
-* 接口返回数据中的分页信息：totalItemNumber,totalPageNumber,hasNext,hasPrev,prev,pageNo,pageSize
-    *  totalItemNumber：查询出来的总数
+* 接口返回数据中的分页信息：
     *  totalPageNumber：根据数据页数计算出来的页数
     *  hasNext：是否有下一页
     *  hasPrev：是否有上一页
