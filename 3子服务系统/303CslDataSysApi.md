@@ -2,22 +2,22 @@
 * 分页参数：pageNo，pageSize
     * pageNo：对查询数据的页数请求，可选，默认为1
     * pageSize：对每页数据的行数请求，可选，默认为20
-* 接口返回数据中的分页信息：totalItemNumber,totalPageNumber,hasNext,hasPrev,prev,pageNo,pageSize
+* 接口返回数据中的分页信息：
     *  totalItemNumber：查询出来的总数
     *  totalPageNumber：根据数据页数计算出来的页数
-    *  hasNext：是否有下一页
-    *  hasPrev：是否有上一页
-    *  prev：上一页页码
-    *  pageNo：当前页码
+    *  hasNext： 是否有下一页
+    *  hasPrev： 是否有上一页
+    *  prev：    上一页页码
+    *  pageNo：  当前页码
     *  pageSize：每页请求数量
 *  请求参数（以下参数接口中若有出现必填）
-    *  player_id：测试值为9~261
-    *  club_id：测试值为2~21
-    *  judge_id：测试值为1~2
-    *  coach_id：测试值为1~14
-    *  league_id：测试值为：1
-    *  round：测试值：1~2
-    *  year：测试值：2015
+    *  player_id：球员ID 
+    *  club_id：  俱乐部ID 
+    *  judge_id： 裁判ID 
+    *  coach_id： 教练ID 
+    *  league_id：联赛ID (可用联赛英文简称代替，如：csl)
+    *  round：    比赛轮次
+    *  year：     联赛年份
 注： 请求参数 league_id  可用 league_name 代替,league_name 的值为 :  csl(中超联赛), cl(中甲联赛), csl-p(中超预备队联赛), acl(亚冠联赛) 
 
 ### 3.4.2. 数据服务接口
