@@ -12,15 +12,16 @@
 * [微服务实战（一）：微服务架构的优势与不足](http://dockone.io/article/394)
 * [微服务实战（二）：使用API Gateway](http://dockone.io/article/482)
 * [微服务实战（三）：深入微服务架构的进程间通信](http://dockone.io/article/549)
-* 微服务实战（四）
+* [微服务实战（四）：服务发现的可行方案以及实践案例](http://dockone.io/article/771)
 * 微服务实战（五）
 * 微服务实战（六）
 * 微服务实战（七）
 
 #### 2. API设计规范
 
-* [撰写合格的REST API](http://zhuanlan.zhihu.com/prattle/20034107)  
-* [来自HeroKu的HTTP API 设计指南](http://get.jobdeer.com/343.get)
+* [RESTful API 设计指南(简)](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
+* [撰写合格的REST API(中)](http://zhuanlan.zhihu.com/prattle/20034107)  
+* [来自HeroKu的HTTP API 设计指南(中)](http://get.jobdeer.com/343.get)
 
 #### 3. 免费的SSL证书
 
