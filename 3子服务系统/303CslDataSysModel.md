@@ -45,7 +45,6 @@ name           中文姓名
 english_name   英文姓名
 country        国籍
 birth          出生年月日
-avatar         教练头像URL
 created_at     创建时间
 updated_at     修改时间
 ```
@@ -64,10 +63,10 @@ position            队内位置，文字描述(门将/后卫/中场/前锋)
 position_number     位置权重，排序用,数字大在前面 1:门将 2:后卫 3:中场 4:前锋;默认为0  
 avatar              球员头像URL
 weight              球员体重(如: 65 kg)
-stature             球员身高(如: 185 cm)
-league_frequency    球员在联赛中出场次数
-league_appe_time    球员在联赛中出场时间
-goads               本赛季的进球数
+height              球员身高(如: 185 cm)
+onfield             球员在本赛季代表俱乐部的出场次数
+onfield_last        球员在本赛季代表俱乐部的出场时间
+goals               本赛季的进球数
 serial_number       参赛编号
 year                效力年份(用于跟踪球员的转会历史)
 league_type         1:踢正赛(比如中超)，2:踢正赛,非正赛(比如中超预备队) 3:踢非正赛
@@ -83,7 +82,7 @@ id
 coach_id         教练ID FK -> data_coach.id
 club_id          俱乐部ID FK-> data_club.id
 year             效力年份
-is_last_served   是否是最后效力的俱乐部
+avatar           教练头像URL
 created_at       创建时间
 updated_at       修改时间
 ```
