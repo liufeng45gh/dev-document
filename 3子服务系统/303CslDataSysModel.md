@@ -9,15 +9,8 @@ id
 name           中文姓名
 english_name   英文姓名
 country        国籍
+native         籍贯
 birth          出生年月日
-position       队内位置，文字描述(门将/后卫/中场/前锋)
-position_number  位置权重，排序用,数字大在前面 1:门将 2:后卫 3:中场 4:前锋 
-player_number  球衣号码
-player_number_icon  球衣号码图片URL
-avatar         球员头像URL
-weight         球员体重
-stature        球员身高
-serialNumber   参赛编号
 created_at     创建时间
 updated_at     修改时间
 ```
@@ -28,16 +21,18 @@ updated_at     修改时间
 Table data_club
 
 id
-logo        俱乐部logo
-bg_image    背景图
-name        中文名称,常用,比如:广州恒大
-full_name   中文全称,备用,比如:广州恒大淘宝足球俱乐部
-en_name     英文名称
-en_full_name英文全称
-intro_url   俱乐部介绍资料(一个网页URL)
-founded_at  创立时间
-created_at  创建时间
-updated_at  修改时间
+logo           俱乐部logo
+bg_image       背景图
+name           中文名称,常用,比如:广州恒大
+full_name      中文全称,备用,比如:广州恒大淘宝足球俱乐部
+en_name        英文名称
+en_full_name   英文全称
+history_name   俱乐部历史名称，json字符串保存:{"2015":"广州恒大淘宝"}
+history_logo   俱乐部历年所用的logo，json字符串保存:{"2015":"https:9hgame.com"}
+intro_url      俱乐部介绍资料(一个网页URL)
+founded_at     俱乐部创立时间
+created_at     创建时间
+updated_at     修改时间
 ```
 
 #### 3.4.1.3. 教练资料
@@ -61,12 +56,23 @@ updated_at     修改时间
 Table data_player_re_club
 
 id
-player_id      球员ID FK->data_player.id
-club_id        俱乐部ID FK->data_club.id
-served_at      效力时间(用于跟踪球员的转会历史)
-is_last_served 是否是最后效力的俱乐部(用于查询俱乐部当前所有球员的列表)
-created_at     创建时间
-updated_at     修改时间
+player_id           球员ID FK->data_player.id
+club_id             俱乐部ID FK->data_club.id
+player_number       球衣号码
+player_number_icon  球衣号码图片URL
+position            队内位置，文字描述(门将/后卫/中场/前锋)
+position_number     位置权重，排序用,数字大在前面 1:门将 2:后卫 3:中场 4:前锋;默认为0  
+avatar              球员头像URL
+weight              球员体重(如: 65 kg)
+stature             球员身高(如: 185 cm)
+league_frequency    球员在联赛中出场次数
+league_appe_time    球员在联赛中出场时间
+goads               本赛季的进球数
+serial_number       参赛编号
+year                效力年份(用于跟踪球员的转会历史)
+league_type         1:踢正赛(比如中超)，2:踢正赛,非正赛(比如中超预备队) 3:踢非正赛
+created_at          创建时间
+updated_at          修改时间
 ```
 #### 3.4.1.5. 教练与俱乐部关联关系
 
@@ -105,12 +111,12 @@ updated_at   修改时间
 Table data_league_re_club
 
 id
-club_id     俱乐部ID   FK-> data_club.id
-league_id   联赛ID     FK-> data_league.id
-year        联赛年份 (支持不带-的当年和带-的跨年两种格式 注:这里考虑到url的/冲突,避免用/做分隔符)
+club_id         俱乐部ID   FK-> data_club.id
+league_id       联赛ID     FK-> data_league.id
+year            联赛年份 (支持不带-的当年和带-的跨年两种格式 注:这里考虑到url的/冲突,避免用/做分隔符)
 display_order   权重排序,数字越大,权重越高，默认皆为1
-created_at  创建时间
-updated_at  修改时间
+created_at      创建时间
+updated_at      修改时间
 
 注: 这就意味着每个新赛季都需要重新录入俱乐部和该联赛的参与关系
 ```
@@ -121,23 +127,23 @@ updated_at  修改时间
 Table data_league_match
 
 id
-kick_at       比赛时间(年月日时分)
-home_score    主队比分(未开赛则为0)
-guest_score   客队比分(未开赛则为0)
-home_club_id  主队ID   FK -> data_club.id
-guest_club_id 客队ID   FK -> data_club.id
-round         比赛轮次 (用于记录联赛的情况)
-knockout      比赛分组(用于记录杯赛的情况,分 pre[预选],a-z[小组],1/16,...1/8,1/4,semi-final[半决赛],final[决赛])
-weekday       比赛星期(一~日)
-stadium       比赛球馆
-league_id     所属联赛  FK-> data_league.id
-audiences     观众人数(用于计算上座率)
-match_status      是否已经结束(1:结束,2:未结束,3:正在进行中,默认皆为 2)
-relative_tag  相关关联标签(如转播计划,精彩视频等),参见新闻的关联标签设计
-video_url    精彩视频转播URL
-year          联赛年份 (支持不带-的当年和带-的跨年两种格式 注:这里考虑到url的/冲突,避免用/做分隔符)
-created_at    创建时间
-updated_at    修改时间
+kick_at          比赛时间(年月日时分)
+home_score       主队比分(未开赛则为0)
+guest_score      客队比分(未开赛则为0)
+home_club_id     主队ID   FK -> data_club.id
+guest_club_id    客队ID   FK -> data_club.id
+round            比赛轮次 (用于记录联赛的情况)
+knockout         比赛分组(用于记录杯赛的情况,分 pre[预选],a-z[小组],1/16,...1/8,1/4,semi-final[半决赛],final[决赛])
+weekday          比赛星期(一~日)
+stadium          比赛球馆
+league_id        所属联赛  FK-> data_league.id
+audiences        观众人数(用于计算上座率)
+match_status     比赛是否结束 (1:表示结束，2：表示进行中，3：表示未开始 默认皆为 3)
+relative_tag     相关关联标签(如转播计划,精彩视频等),参见新闻的关联标签设计
+video_url        精彩视频转播URL
+year             联赛年份 (支持不带-的当年和带-的跨年两种格式 注:这里考虑到url的/冲突,避免用/做分隔符)
+created_at       创建时间
+updated_at       修改时间
 ```
 
 #### 3.4.1.9. 联赛转播计划
