@@ -6,13 +6,13 @@
 Table data_player
 
 id
-name           中文姓名
-english_name   英文姓名
-country        国籍
-native         籍贯
-birth          出生年月日
-created_at     创建时间
-updated_at     修改时间
+name                 中文姓名
+english_name         英文姓名
+country              国籍
+native_place         籍贯
+birth                出生年月日
+created_at           创建时间
+updated_at           修改时间
 ```
 
 #### 3.4.1.2. 俱乐部资料
