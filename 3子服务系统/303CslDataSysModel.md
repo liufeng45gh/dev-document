@@ -80,12 +80,12 @@ updated_at          修改时间
 Table data_coach_re_club
 
 id
-coach_id       教练ID FK -> data_coach.id
-club_id        俱乐部ID FK-> data_club.id
-served_at      效力时间
-is_last_served 是否是最后效力的俱乐部
-created_at     创建时间
-updated_at     修改时间
+coach_id         教练ID FK -> data_coach.id
+club_id          俱乐部ID FK-> data_club.id
+year             效力年份
+is_last_served   是否是最后效力的俱乐部
+created_at       创建时间
+updated_at       修改时间
 ```
 
 #### 3.4.1.6. 联赛资料
