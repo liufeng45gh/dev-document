@@ -126,10 +126,10 @@ updated_at      修改时间
 Table data_league_match
 
 id
-kick_at          比赛时间(年月日时分)
-home_score       主队比分(未开赛则为0)
-guest_score      客队比分(未开赛则为0)
-home_club_id     主队ID   FK -> data_club.id
+kick_at         比赛时间(年月日时分)
+home_score      主队比分(未开赛则为0)
+guest_score     客队比分(未开赛则为0)
+home_club_id    主队ID   FK -> data_club.id
 guest_club_id    客队ID   FK -> data_club.id
 round            比赛轮次 (用于记录联赛的情况)
 knockout         比赛分组(用于记录杯赛的情况,分 pre[预选],a-z[小组],1/16,...1/8,1/4,semi-final[半决赛],final[决赛])
@@ -137,9 +137,9 @@ weekday          比赛星期(一~日)
 stadium          比赛球馆
 league_id        所属联赛  FK-> data_league.id
 audiences        观众人数(用于计算上座率)
-match_status     比赛是否结束 (1:表示结束，2：表示进行中，3：表示未开始 默认皆为 3)
-relative_tag     相关关联标签(如转播计划,精彩视频等),参见新闻的关联标签设计
+match_status     是否已经结束(1:结束,2:未结束,3:正在进行中,默认皆为 2)
 video_url        精彩视频转播URL
+broadcast        比赛转播(以Json 格式保存如：[{"castName":"乐视","castUrl":"http://leshi.com"},{"castName":"腾讯","castUrl":"http://v.qq.com/"}])
 year             联赛年份 (支持不带-的当年和带-的跨年两种格式 注:这里考虑到url的/冲突,避免用/做分隔符)
 created_at       创建时间
 updated_at       修改时间
