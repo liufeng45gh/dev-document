@@ -66,6 +66,10 @@
 
 * [Charles 从入门到精通(网络封包分析工具)](http://blog.devtang.com/blog/2015/11/14/charles-introduction/)
 
+#### 12. 优化
+
+* [iOS 保持界面流畅的技巧](http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/)
+
 ### 2. 后续实现目标
 
 #### 1. Docker容器
