@@ -57,6 +57,7 @@
 * [JavaScript编码规范]
 * [Go编码规范]
 * [CSS编码规范]
+* [Swift编码规范(英文)](https://github.com/raywenderlich/swift-style-guide)
 
 #### 10. 应用架构规范
 
