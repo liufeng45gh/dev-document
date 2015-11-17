@@ -3,19 +3,19 @@
 
 #### 获得圈子所有的版块信息
 
-GET http://group.service.9h.com/sections
+GET http://group.service.9h.com/v1/sections
 
 #### 获得某个圈子的版块信息
 
-GET http://group.service.9h.com/sections/{section_id}
+GET http://group.service.9h.com/v1/sections/{section_id}
 
 #### 获得某个版块的置顶贴信息
 
-GET http://group.service.9h.com/sections/{section_id}/topcis/tops
+GET http://group.service.9h.com/v1/sections/{section_id}/topcis?isTop=true
 
 #### 获得某个版块的所有主贴列表(非置顶，含精华，含附件，获赞数，回帖数)
 
-GET http://group.service.9h.com/sections/{section_id}/topcis/tops
+GET http://group.service.9h.com/sections/{section_id}/topcis
 
 #### 获得某个主帖的回帖列表
 
