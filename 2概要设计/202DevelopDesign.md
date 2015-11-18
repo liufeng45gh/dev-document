@@ -7,8 +7,6 @@
 
 #### 1. 微服务架构
 
-<img src="../Pics/microarch01.jpg" alt="微服务简单概要图" width="640" height="360" border="10" />
-
 * [微服务实战（一）：微服务架构的优势与不足](http://dockone.io/article/394)
 * [微服务实战（二）：使用API Gateway](http://dockone.io/article/482)
 * [微服务实战（三）：深入微服务架构的进程间通信](http://dockone.io/article/549)
