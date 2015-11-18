@@ -8,21 +8,37 @@ GET http://group.service.9h.com/v1/sections
 返回格式:
 
 {
+
     "oper_code": "1",
+
     "data": [
+
             {
+
                 "sectionId": "1", ->版块id
+
                 "title": "中超联赛", -> 版块名称
+
                 "logo": "", -> 版块的缩略图,为俱乐部队徽
+
                 "clubId": "", -> 关联俱乐部id，中超联赛的版块不关联clubId
+
                 "bgImage": "", ->背景图片
+
                 "isHidden":"", ->是否显示
+
                 "topics": 3456, -> 发帖数
+
                 "bgImage": "", ->背景图
+
             },
+
             {},
+
             {}
+
         ]
+
 }
 
 #### 获得某个圈子的版块信息
@@ -34,17 +50,29 @@ GET http://group.service.9h.com/v1/sections/{section_id}
 返回格式:
 
 {
+
     "oper_code": "1",
+
     "data": {
+
                 "sectionId": "1", ->版块id
+
                 "title": "中超联赛", -> 版块名称
+
                 "logo": "", -> 版块的缩略图,为俱乐部队徽
+
                 "clubId": "", -> 关联俱乐部id，中超联赛的版块不关联clubId
+
                 "bgImage": "", ->背景图片
+
                 "isHidden":"", ->是否显示
+
                 "topics": 3456, -> 发帖数
+
                 "bgImage": "", ->背景图
+
             }
+
 }
 
 #### 获得某个版块的置顶贴信息
@@ -72,23 +100,41 @@ GET http://group.service.9h.com/sections/{section_id}/topcis
 
 
 {
+
     "oper_code": "1",
+
     "data": [
+
             {
+
                 "topicId": "1", ->帖子id
+
                 "sectionId": "->版块id
+
                 "authorId": "", ->作者id
+
                 "title": "", -> 帖子标题
+
                 "content": "", -> 帖子内容
+
                 "isBest": "", -> 精华贴
+
                 "isTop": "", ->置顶贴
+
                 "replys":"", ->回复条数
+
                 "praisies": 3456, -> 赞
+
                 "isDeleted": "", ->是否删除
+
             },
+
             {},
+
             {}
+
         ]
+
 }
 
 #### 获得某个主帖的回帖列表
@@ -108,20 +154,35 @@ GET http://group.service.9h.com/topics/{topic_id}/replys
 返回json:
 
 {
+
     "oper_code": "1",
+
     "data": [
+
             {
+
             	"replyId": "1", ->回复id
+
                 "topicId": "1", ->帖子id
+
                 "authorId": "", ->回复人id
+
                 "content": "", -> 内容
+
                 "userAtTag": "", -> @的用户 
+
                 "comments": "", ->评论数
+
                 "isDeleted": "", ->是否删除
+
             },
+
             {},
+
             {}
+
         ]
+
 }
 
 #### 跟帖某个主贴
@@ -145,19 +206,33 @@ GET http://group.service.9h.com/topics/{topic_id}/replys/{reply_id}/comments
 返回json:
 
 {
+
     "oper_code": "1",
+
     "data": [
+
             {
+
             	"commentId": "1", ->评论id
+
                 "replyId": "1", ->回复id
+
                 "content": "", -> 内容
+
                 "userAtTag": "", -> @的用户 
+
                 "authorId": "", ->评论人id
+
                 "isDeleted": "", ->是否删除
+
             },
+
             {},
+
             {}
+
         ]
+        
 }
 
 #### 评论某个回帖
