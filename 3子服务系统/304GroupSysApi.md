@@ -10,20 +10,25 @@ GET http://group.service.9h.com/v1/sections
 ```
 {
     "oper_code": "1",
-    "data": [
-            {
-                "sectionId": "1", ->版块id
-                "title": "中超联赛", -> 版块名称
-                "logo": "", -> 版块的缩略图,为俱乐部队徽
-                "clubId": "", -> 关联俱乐部id，中超联赛的版块不关联clubId
-                "bgImage": "", ->背景图片
-                "isHidden":"", ->是否显示
-                "topics": 3456, -> 发帖数
-                "bgImage": "", ->背景图
-            },
-            {},
-            {}
-        ]
+    "data":{
+                hasNext: true,
+                dataList: [
+                                {
+                                    "sectionId": "1", ->版块id
+                                    "title": "中超联赛", -> 版块名称
+                                    "logo": "", -> 版块的缩略图,为俱乐部队徽
+                                    "clubId": "", -> 关联俱乐部id，中超联赛的版块不关联clubId
+                                    "bgImage": "", ->背景图片
+                                    "isHidden":"", ->是否显示
+                                    "topics": 3456, -> 发帖数
+                                    "bgImage": "", ->背景图
+                                },
+                                {},
+                                {}
+                            ]
+
+            }
+     
 }
 ```
 
@@ -78,22 +83,27 @@ GET http://group.service.9h.com/sections/{section_id}/topcis
 ```
 {
     "oper_code": "1",
-    "data": [
-            {
-                "topicId": "1", ->帖子id
-                "sectionId": "->版块id
-                "authorId": "", ->作者id
-                "title": "", -> 帖子标题
-                "content": "", -> 帖子内容
-                "isBest": "", -> 精华贴
-                "isTop": "", ->置顶贴
-                "replys":"", ->回复条数
-                "praisies": 3456, -> 赞
-                "isDeleted": "", ->是否删除
-            },
-            {},
-            {}
-        ]
+    "data": {
+                hasNext: true,
+                dataList: [
+                                {
+                                    "topicId": "1", ->帖子id
+                                    "sectionId": "->版块id
+                                    "authorId": "", ->作者id
+                                    "title": "", -> 帖子标题
+                                    "content": "", -> 帖子内容
+                                    "isBest": "", -> 精华贴
+                                    "isTop": "", ->置顶贴
+                                    "replys":"", ->回复条数
+                                    "praisies": 3456, -> 赞
+                                    "isDeleted": "", ->是否删除
+                                },
+                                {},
+                                {}
+                            ]
+            }
+
+    
 }
 ```
 
@@ -116,19 +126,24 @@ GET http://group.service.9h.com/topics/{topic_id}/replys
 ```
 {
     "oper_code": "1",
-    "data": [
-            {
-            	"replyId": "1", ->回复id
-                "topicId": "1", ->帖子id
-                "authorId": "", ->回复人id
-                "content": "", -> 内容
-                "userAtTag": "", -> @的用户 
-                "comments": "", ->评论数
-                "isDeleted": "", ->是否删除
-            },
-            {},
-            {}
-        ]
+    "data": {
+                hasNext: true,
+                dataList： [
+                                {
+                                    "replyId": "1", ->回复id
+                                    "topicId": "1", ->帖子id
+                                    "authorId": "", ->回复人id
+                                    "content": "", -> 内容
+                                    "userAtTag": "", -> @的用户 
+                                    "comments": "", ->评论数
+                                    "isDeleted": "", ->是否删除
+                                },
+                                {},
+                                {}
+                            ]
+            }
+
+    
 }
 ```
 
@@ -155,18 +170,23 @@ GET http://group.service.9h.com/topics/{topic_id}/replys/{reply_id}/comments
 ```
 {
     "oper_code": "1",
-    "data": [
-            {
-            	"commentId": "1", ->评论id
-                "replyId": "1", ->回复id
-                "content": "", -> 内容
-                "userAtTag": "", -> @的用户 
-                "authorId": "", ->评论人id
-                "isDeleted": "", ->是否删除
-            },
-            {},
-            {}
-        ]
+    "data": {
+                hasNext: true,
+                dataList：[
+                                {
+                                    "commentId": "1", ->评论id
+                                    "replyId": "1", ->回复id
+                                    "content": "", -> 内容
+                                    "userAtTag": "", -> @的用户 
+                                    "authorId": "", ->评论人id
+                                    "isDeleted": "", ->是否删除
+                                },
+                                {},
+                                {}
+                            ]
+            }
+
+    
 }
 ```
 
