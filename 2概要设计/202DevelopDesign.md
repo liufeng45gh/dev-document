@@ -85,10 +85,13 @@
 
 #### 5. 后台管理系统重构
 
-* 使用Angular
+* 使用Angular.js
 
 #### 6. 客户端的应用架构提升
 
+#### 7. Rest架构的技术选型优化
+
+* [最好的8个Java RESTful框架](http://colobu.com/2015/11/15/best-available-java-restful-micro-frameworks/)
 
 
 
