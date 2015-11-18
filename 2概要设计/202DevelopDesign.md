@@ -7,8 +7,6 @@
 
 #### 1. 微服务架构
 
-<img src="../Pics/microarch01.jpg" alt="微服务简单概要图" width="640" height="360" border="10" />
-
 * [微服务实战（一）：微服务架构的优势与不足](http://dockone.io/article/394)
 * [微服务实战（二）：使用API Gateway](http://dockone.io/article/482)
 * [微服务实战（三）：深入微服务架构的进程间通信](http://dockone.io/article/549)
@@ -57,6 +55,7 @@
 * [JavaScript编码规范]
 * [Go编码规范]
 * [CSS编码规范]
+* [Swift编码规范(英文)](https://github.com/raywenderlich/swift-style-guide)
 
 #### 10. 应用架构规范
 
@@ -84,10 +83,13 @@
 
 #### 5. 后台管理系统重构
 
-* 使用Angular
+* 使用Angular.js
 
 #### 6. 客户端的应用架构提升
 
+#### 7. Rest架构的技术选型优化
+
+* [最好的8个Java RESTful框架](http://colobu.com/2015/11/15/best-available-java-restful-micro-frameworks/)
 
 
 
