@@ -75,7 +75,7 @@ id
 topic_id   所属主帖的id
 reply_id   所属跟帖的id
 author_id  回复人的id
-type       附件类型(image[图片],video[视频],vocie[语音],)
+type       附件类型(image[图片],video[视频],voice[语音],)
 title      附件标题
 file_url   附件的路径(url)
 thumb_url  附件的缩略图路径

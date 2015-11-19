@@ -1,0 +1,1655 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>数据子系统接口 | CSL中超官方移动互联网产品系统设计书</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.0.1">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../3子服务系统/304GroupSysIntro.html" />
+    
+    
+    <link rel="prev" href="../3子服务系统/303CslDataSysModel.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    <div class="book" data-level="3.4.2" data-basepath=".." data-revision="Thu Nov 19 2015 14:42:17 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+            
+            <li>
+                <a href="http://www.9hcom.com" target="blank" class="custom-link">Copyright 九合体育 2015</a>
+            </li>
+        
+        
+
+        
+        <li class="divider"></li>
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="1产品设计/index.html">
+            
+                
+                    <a href="../1产品设计/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        产品设计
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="1产品设计/101ProductDesign.html">
+            
+                
+                    <a href="../1产品设计/101ProductDesign.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        功能
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="2概要设计/index.html">
+            
+                
+                    <a href="../2概要设计/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        研发设计
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="2概要设计/201VisualDesign.html">
+            
+                
+                    <a href="../2概要设计/201VisualDesign.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        设计Wiki
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="2概要设计/202DevelopDesign.html">
+            
+                
+                    <a href="../2概要设计/202DevelopDesign.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        技术Wiki
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="2概要设计/203DevelopArch.html">
+            
+                
+                    <a href="../2概要设计/203DevelopArch.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        系统架构
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="3子服务系统/index.html">
+            
+                
+                    <a href="../3子服务系统/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        子服务系统
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="3子服务系统/301UserSysIntro.html">
+            
+                
+                    <a href="../3子服务系统/301UserSysIntro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        用户
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="3子服务系统/301UserSysModel.html">
+            
+                
+                    <a href="../3子服务系统/301UserSysModel.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.1.</b>
+                        
+                        用户子系统数据模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="3子服务系统/301UserSysApi.html">
+            
+                
+                    <a href="../3子服务系统/301UserSysApi.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.2.</b>
+                        
+                        用户子系统接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="3子服务系统/302NewsSysIntro.html">
+            
+                
+                    <a href="../3子服务系统/302NewsSysIntro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        新闻
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="3子服务系统/302NewsSysModel.html">
+            
+                
+                    <a href="../3子服务系统/302NewsSysModel.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.1.</b>
+                        
+                        新闻系统数据模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="3子服务系统/302NewsSysApi.html">
+            
+                
+                    <a href="../3子服务系统/302NewsSysApi.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.2.</b>
+                        
+                        新闻系统接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="3子服务系统/310AdSysIntro.html">
+            
+                
+                    <a href="../3子服务系统/310AdSysIntro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        广告
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="3子服务系统/310AdSysModel.html">
+            
+                
+                    <a href="../3子服务系统/310AdSysModel.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.1.</b>
+                        
+                        广告子系统数据模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="3子服务系统/310AdSysApi.html">
+            
+                
+                    <a href="../3子服务系统/310AdSysApi.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.2.</b>
+                        
+                        广告子系统接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="3子服务系统/303CslDataSysIntro.html">
+            
+                
+                    <a href="../3子服务系统/303CslDataSysIntro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        数据
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="3子服务系统/303CslDataSysModel.html">
+            
+                
+                    <a href="../3子服务系统/303CslDataSysModel.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.1.</b>
+                        
+                        数据子系统数据模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.4.2" data-path="3子服务系统/303CslDataSysApi.html">
+            
+                
+                    <a href="../3子服务系统/303CslDataSysApi.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.</b>
+                        
+                        数据子系统接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="3子服务系统/304GroupSysIntro.html">
+            
+                
+                    <a href="../3子服务系统/304GroupSysIntro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        圈子
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="3子服务系统/304GroupSysModel.html">
+            
+                
+                    <a href="../3子服务系统/304GroupSysModel.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.1.</b>
+                        
+                        圈子子系统数据模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="3子服务系统/304GroupSysApi.html">
+            
+                
+                    <a href="../3子服务系统/304GroupSysApi.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.2.</b>
+                        
+                        圈子子系统接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="3子服务系统/305EntertainmentSys.html">
+            
+                
+                    <a href="../3子服务系统/305EntertainmentSys.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        娱乐
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="3子服务系统/306ShopSys.html">
+            
+                
+                    <a href="../3子服务系统/306ShopSys.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        商城
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="3子服务系统/307PaySys.html">
+            
+                
+                    <a href="../3子服务系统/307PaySys.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        支付
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="3子服务系统/308NotificationSys.html">
+            
+                
+                    <a href="../3子服务系统/308NotificationSys.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        推送
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="3子服务系统/309AppManageSysIntro.html">
+            
+                
+                    <a href="../3子服务系统/309AppManageSysIntro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.</b>
+                        
+                        App管理
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1" data-path="3子服务系统/309AppManageSysModel.html">
+            
+                
+                    <a href="../3子服务系统/309AppManageSysModel.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.1.</b>
+                        
+                        设置类子系统数据模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.2" data-path="3子服务系统/309AppManageSysApi.html">
+            
+                
+                    <a href="../3子服务系统/309AppManageSysApi.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.2.</b>
+                        
+                        设置类子系统接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="4API网关/index.html">
+            
+                
+                    <a href="../4API网关/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        API网关
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="4API网关/401Specific.html">
+            
+                
+                    <a href="../4API网关/401Specific.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        设计规格
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="4API网关/402API.html">
+            
+                
+                    <a href="../4API网关/402API.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        网关接口
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="4API网关/403APIManage.html">
+            
+                
+                    <a href="../4API网关/403APIManage.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        网关管理
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="5后台管理/index.html">
+            
+                
+                    <a href="../5后台管理/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        后台管理
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="5后台管理/501MISys.html">
+            
+                
+                    <a href="../5后台管理/501MISys.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        后台管理
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" >
+            
+            <span><b>6.</b> [求球]</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="qq/qq-api.html">
+            
+                
+                    <a href="../qq/qq-api.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        API
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >CSL中超官方移动互联网产品系统设计书</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h3 id="%E9%80%9A%E7%94%A8%E8%A7%84%E5%88%99">&#x901A;&#x7528;&#x89C4;&#x5219;</h3>
+<ul>
+<li>&#x5206;&#x9875;&#x53C2;&#x6570;&#xFF1A;pageNo&#xFF0C;pageSize<ul>
+<li>pageNo&#xFF1A;&#x5BF9;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x7684;&#x9875;&#x6570;&#x8BF7;&#x6C42;&#xFF0C;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;1</li>
+<li>pageSize&#xFF1A;&#x5BF9;&#x6BCF;&#x9875;&#x6570;&#x636E;&#x7684;&#x884C;&#x6570;&#x8BF7;&#x6C42;&#xFF0C;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;20</li>
+</ul>
+</li>
+<li>&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x4E2D;&#x7684;&#x5206;&#x9875;&#x4FE1;&#x606F;&#xFF1A;<ul>
+<li>totalItemNumber&#xFF1A;&#x67E5;&#x8BE2;&#x51FA;&#x6765;&#x7684;&#x603B;&#x6570;</li>
+<li>totalPageNumber&#xFF1A;&#x6839;&#x636E;&#x6570;&#x636E;&#x9875;&#x6570;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x7684;&#x9875;&#x6570;</li>
+<li>hasNext&#xFF1A; &#x662F;&#x5426;&#x6709;&#x4E0B;&#x4E00;&#x9875;</li>
+<li>hasPrev&#xFF1A; &#x662F;&#x5426;&#x6709;&#x4E0A;&#x4E00;&#x9875;</li>
+<li>prev&#xFF1A;    &#x4E0A;&#x4E00;&#x9875;&#x9875;&#x7801;</li>
+<li>pageNo&#xFF1A;  &#x5F53;&#x524D;&#x9875;&#x7801;</li>
+<li>pageSize&#xFF1A;&#x6BCF;&#x9875;&#x8BF7;&#x6C42;&#x6570;&#x91CF;</li>
+</ul>
+</li>
+<li>&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#xFF08;&#x4EE5;&#x4E0B;&#x53C2;&#x6570;&#x63A5;&#x53E3;&#x4E2D;&#x82E5;&#x6709;&#x51FA;&#x73B0;&#x5FC5;&#x586B;&#xFF09;<ul>
+<li>player_id&#xFF1A;&#x7403;&#x5458;ID </li>
+<li>club_id&#xFF1A;  &#x4FF1;&#x4E50;&#x90E8;ID </li>
+<li>judge_id&#xFF1A; &#x88C1;&#x5224;ID </li>
+<li>coach_id&#xFF1A; &#x6559;&#x7EC3;ID </li>
+<li>league_id&#xFF1A;&#x8054;&#x8D5B;ID (&#x53EF;&#x7528;&#x8054;&#x8D5B;&#x82F1;&#x6587;&#x7B80;&#x79F0;&#x4EE3;&#x66FF;&#xFF0C;&#x5982;&#xFF1A;csl)</li>
+<li>round&#xFF1A;    &#x6BD4;&#x8D5B;&#x8F6E;&#x6B21;</li>
+<li>year&#xFF1A;     &#x8054;&#x8D5B;&#x5E74;&#x4EFD;
+&#x6CE8;&#xFF1A; &#x8BF7;&#x6C42;&#x53C2;&#x6570; league_id  &#x53EF;&#x7528; league_name &#x4EE3;&#x66FF;,league_name &#x7684;&#x503C;&#x4E3A; :  csl(&#x4E2D;&#x8D85;&#x8054;&#x8D5B;), cl(&#x4E2D;&#x7532;&#x8054;&#x8D5B;), csl-p(&#x4E2D;&#x8D85;&#x9884;&#x5907;&#x961F;&#x8054;&#x8D5B;), acl(&#x4E9A;&#x51A0;&#x8054;&#x8D5B;) </li>
+</ul>
+</li>
+</ul>
+<h3 id="3-4-2-%E6%95%B0%E6%8D%AE%E6%9C%8D%E5%8A%A1%E6%8E%A5%E5%8F%A3">3.4.2. &#x6570;&#x636E;&#x670D;&#x52A1;&#x63A5;&#x53E3;</h3>
+<h4 id="3-4-2-1-%E8%8E%B7%E5%8F%96%E6%9F%90%E4%BD%8D%E7%90%83%E5%91%98%E7%9A%84%E8%AF%A6%E7%BB%86%E8%B5%84%E6%96%99">3.4.2.1  &#x83B7;&#x53D6;&#x67D0;&#x4F4D;&#x7403;&#x5458;&#x7684;&#x8BE6;&#x7EC6;&#x8D44;&#x6599;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/players/{player_id}" target="_blank">http://data.service.9h.com/players/{player_id}</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET,PUT,DELETE</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">player_id&#xFF1A;&#x7403;&#x5458;&#x7684;id,&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-4-2-2-%E4%BF%AE%E6%94%B9%E6%9F%90%E4%BD%8D%E7%90%83%E5%91%98%E7%9A%84%E8%AF%A6%E7%BB%86%E8%B5%84%E6%96%99">3.4.2.2  &#x4FEE;&#x6539;&#x67D0;&#x4F4D;&#x7403;&#x5458;&#x7684;&#x8BE6;&#x7EC6;&#x8D44;&#x6599;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/players" target="_blank">http://data.service.9h.com/players</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">POST : &#x4FDD;&#x5B58;&#x4E00;&#x4F4D;&#x7403;&#x5458;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET : &#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;&#x7403;&#x5458;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">filters (&#x5982;:pageNo,pageSize),value(&#x5982;:1,25) &#x53EF;&#x9009;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">DELETE : &#x5220;&#x9664;&#x591A;&#x4E2A;&#x7403;&#x5458;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">ids(&#x5982;:4,5,6,7)  &#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-4-2-3-%E8%8E%B7%E5%8F%96%E6%9F%90%E4%B8%AA%E4%BF%B1%E4%B9%90%E9%83%A8%E7%9A%84%E8%AF%A6%E7%BB%86%E8%B5%84%E6%96%99">3.4.2.3  &#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x4FF1;&#x4E50;&#x90E8;&#x7684;&#x8BE6;&#x7EC6;&#x8D44;&#x6599;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/clubs/{club_id}" target="_blank">http://data.service.9h.com/clubs/{club_id}</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET&#x3001;PUT&#x3001;DELETE</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">club_id&#xFF1A;&#x4FF1;&#x4E50;&#x90E8;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-4-2-4-%E4%BF%AE%E6%94%B9%E6%9F%90%E4%B8%AA%E4%BF%B1%E4%B9%90%E9%83%A8%E7%9A%84%E8%AF%A6%E7%BB%86%E8%B5%84%E6%96%99">3.4.2.4  &#x4FEE;&#x6539;&#x67D0;&#x4E2A;&#x4FF1;&#x4E50;&#x90E8;&#x7684;&#x8BE6;&#x7EC6;&#x8D44;&#x6599;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/clubs" target="_blank">http://data.service.9h.com/clubs</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">POST :&#x4FDD;&#x5B58;&#x4E00;&#x4E2A;&#x4FF1;&#x4E50;&#x90E8;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET :&#x83B7;&#x53D6;&#x6240;&#x6709;&#x4FF1;&#x4E50;&#x90E8;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">pageNo ,pageSize &#x53EF;&#x9009;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">DELETE : &#x5220;&#x9664;&#x591A;&#x4E2A;&#x4FF1;&#x4E50;&#x90E8;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">ids(&#x5982;:ids=1,2,3) &#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-4-2-5-%E6%A0%B9%E6%8D%AE%E4%B8%80%E7%BB%84clubid%E8%8E%B7%E5%8F%96%E5%A4%9A%E4%B8%AA%E4%BF%B1%E4%B9%90%E9%83%A8%E8%AF%A6%E7%BB%86%E8%B5%84%E6%96%99">3.4.2.5  &#x6839;&#x636E;&#x4E00;&#x7EC4;clubId&#x83B7;&#x53D6;&#x591A;&#x4E2A;&#x4FF1;&#x4E50;&#x90E8;&#x8BE6;&#x7EC6;&#x8D44;&#x6599;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/follow-clubs" target="_blank">http://data.service.9h.com/follow-clubs</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET : &#x83B7;&#x53D6;&#x591A;&#x4E2A;&#x4FF1;&#x4E50;&#x90E8;&#x8BE6;&#x60C5;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">ids(&#x5982;:ids=12,13,14)  &#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6CE8;:&#x6B64;&#x63A5;&#x53E3;&#x7528;&#x4E8E;&#x7528;&#x6237;&#x5173;&#x6CE8;&#x4FF1;&#x4E50;&#x90E8;&#x4F7F;&#x7528;</p>
+<h4 id="3-4-2-6-%E8%8E%B7%E5%8F%96%E6%9F%90%E4%B8%AA%E4%BF%B1%E4%B9%90%E9%83%A8%E4%B8%8B%E5%B1%9E-%E7%8E%B0%E5%BD%B9-%E6%89%80%E6%9C%89%E7%90%83%E5%91%98%E7%9A%84%E8%B5%84%E6%96%99">3.4.2.6 &#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x4FF1;&#x4E50;&#x90E8;&#x4E0B;&#x5C5E;(&#x73B0;&#x5F79;)&#x6240;&#x6709;&#x7403;&#x5458;&#x7684;&#x8D44;&#x6599;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/clubs/{clubId}/players" target="_blank">http://data.service.9h.com/clubs/{clubId}/players</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET : &#x83B7;&#x53D6;&#x7403;&#x5458;<br>POST : &#x7ED9;&#x67D0;&#x4FF1;&#x4E50;&#x90E8;&#x6DFB;&#x52A0;&#x7403;&#x5458;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">club_id&#xFF1A;&#x4FF1;&#x4E50;&#x90E8;&#x7684;id,&#x5FC5;&#x586B;<br>served=true : &#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x4FF1;&#x4E50;&#x90E8;&#x4E0B;&#x73B0;&#x5F79;&#x7684;&#x6240;&#x6709;&#x7403;&#x5458;<br>served=false&#xFF1A;&#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x4FF1;&#x4E50;&#x90E8;&#x4E0B;&#x670D;&#x5F79;&#x8FC7;&#x7684;&#x7403;&#x5458;(&#x4E0D;&#x5305;&#x62EC;&#x5728;&#x5F79;&#x7403;&#x5458;)<br>served : &#x4E0D;&#x586B;&#x5199;&#x5C06;&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x7684;&#x7403;&#x5458;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-7-%E4%BF%AE%E6%94%B9%E6%9F%90%E4%B8%AA%E4%BF%B1%E4%B9%90%E9%83%A8%E4%B8%8E%E7%90%83%E5%91%98%E7%9A%84%E5%85%B3%E8%81%94%E5%85%B3%E7%B3%BB">3.5.2.7  &#x4FEE;&#x6539;&#x67D0;&#x4E2A;&#x4FF1;&#x4E50;&#x90E8;&#x4E0E;&#x7403;&#x5458;&#x7684;&#x5173;&#x8054;&#x5173;&#x7CFB;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/clubs/{clubId}/players/{playerReClubId}" target="_blank">http://data.service.9h.com/clubs/{clubId}/players/{playerReClubId}</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">PUT:&#x66F4;&#x65B0;&#x7403;&#x5458;&#x4E0E;&#x4FF1;&#x4E50;&#x90E8;&#x7684;&#x5173;&#x8054;&#x5173;&#x7CFB;<br>DELETE : &#x5220;&#x9664;&#x7403;&#x5458;&#x4E0E;&#x4FF1;&#x4E50;&#x90E8;&#x7684;&#x5173;&#x8054;&#x5173;&#x7CFB;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">playerReClubId &#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-8-%E8%8E%B7%E5%8F%96%E6%9F%90%E4%BD%8D%E6%95%99%E7%BB%83%E7%9A%84%E8%AF%A6%E7%BB%86%E8%B5%84%E6%96%99">3.5.2.8  &#x83B7;&#x53D6;&#x67D0;&#x4F4D;&#x6559;&#x7EC3;&#x7684;&#x8BE6;&#x7EC6;&#x8D44;&#x6599;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com//coachs/{coach_id}" target="_blank">http://data.service.9h.com//coachs/{coach_id}</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET&#x3001;PUT&#x3001;DELETE</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">coach_id&#xFF1A;&#x6559;&#x7EC3;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-9-%E5%B0%86%E4%B8%80%E4%BD%8D%E6%95%99%E7%BB%83%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E4%BF%9D%E5%AD%98%E5%88%B0%E6%95%B0%E6%8D%AE%E5%BA%93">3.5.2.9  &#x5C06;&#x4E00;&#x4F4D;&#x6559;&#x7EC3;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/coachs" target="_blank">http://data.service.9h.com/coachs</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">POST : &#x4FDD;&#x5B58;&#x4E00;&#x4F4D;&#x6559;&#x7EC3;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET : &#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;&#x6559;&#x7EC3;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">pageNo,pageSize &#x53EF;&#x9009;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">DELETE : &#x5220;&#x9664;&#x591A;&#x4F4D;&#x6559;&#x7EC3;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">ids : &#x5FC5;&#x586B;(&#x5982; : ids=12,3,2)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-10-%E8%8E%B7%E5%8F%96%E6%9F%90%E4%BD%8D%E8%A3%81%E5%88%A4%E7%9A%84%E8%AF%A6%E7%BB%86%E8%B5%84%E6%96%99">3.5.2.10  &#x83B7;&#x53D6;&#x67D0;&#x4F4D;&#x88C1;&#x5224;&#x7684;&#x8BE6;&#x7EC6;&#x8D44;&#x6599;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/judges/{judge_id}" target="_blank">http://data.service.9h.com/judges/{judge_id}</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET&#x3001;PUT&#x3001;DELETE</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">judge_id&#xFF1A;&#x88C1;&#x5224;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-11-%E5%B0%86%E4%B8%80%E4%BD%8D%E8%A3%81%E5%88%A4%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E4%BF%9D%E5%AD%98%E5%88%B0%E6%95%B0%E6%8D%AE%E5%BA%93">3.5.2.11   &#x5C06;&#x4E00;&#x4F4D;&#x88C1;&#x5224;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/judges" target="_blank">http://data.service.9h.com/judges</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">POST : &#x4FDD;&#x5B58;&#x4E00;&#x4F4D;&#x88C1;&#x5224;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET :  &#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;&#x88C1;&#x5224;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">pageNo&#xFF0C;pageSize &#x53EF;&#x9009;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">DELETE : &#x5220;&#x9664;&#x591A;&#x4F4D;&#x88C1;&#x5224;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">ids : &#x5FC5;&#x586B;(&#x5982; : ids= 12,1,2)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-12-%E8%8E%B7%E5%8F%96%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B-%E6%9D%AF%E8%B5%9B%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF">3.5.2.12  &#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x8054;&#x8D5B;/&#x676F;&#x8D5B;&#x7684;&#x57FA;&#x672C;&#x4FE1;&#x606F;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}" target="_blank">http://data.service.9h.com/leagues/{league_id}</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET&#x3001;PUT&#x3001;DELETE</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-13-%E5%B0%86%E4%B8%80%E4%B8%AA%E8%81%94%E8%B5%9B-%E6%9D%AF%E8%B5%9B%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF%E4%BF%9D%E5%AD%98%E5%88%B0%E6%95%B0%E6%8D%AE%E5%BA%93">3.5.2.13   &#x5C06;&#x4E00;&#x4E2A;&#x8054;&#x8D5B;/&#x676F;&#x8D5B;&#x7684;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues" target="_blank">http://data.service.9h.com/leagues</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">POST : &#x4FDD;&#x5B58;&#x4E00;&#x4E2A;&#x8054;&#x8D5B;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET : &#x83B7;&#x53D6;&#x6240;&#x6709;&#x8054;&#x8D5B;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">pageNo,pageSize  &#x9009;&#x586B;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">DELETE : &#x5220;&#x9664;&#x591A;&#x4E2A;&#x8054;&#x8D5B;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">ids(&#x5982; : ids=14,12,13) &#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-14-%E8%8E%B7%E5%8F%96%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B-%E6%9D%AF%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E7%9A%84%E6%89%80%E6%9C%89%E5%8F%82%E8%B5%9B%E7%90%83%E9%98%9F">3.5.2.14  &#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x8054;&#x8D5B;/&#x676F;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x6240;&#x6709;&#x53C2;&#x8D5B;&#x7403;&#x961F;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/clubs" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/clubs</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET, POST</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-15-%E4%BF%AE%E6%94%B9%E4%BF%B1%E4%B9%90%E9%83%A8%E4%B8%8E%E8%81%94%E8%B5%9B%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB">3.5.2.15  &#x4FEE;&#x6539;&#x4FF1;&#x4E50;&#x90E8;&#x4E0E;&#x8054;&#x8D5B;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/clubs/{leaugeReClubId}" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/clubs/{leaugeReClubId}</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET, POST</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id, &#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;, &#x5FC5;&#x586B;<br>leaugeReClubId : &#x8054;&#x8D5B;&#x4E0E;&#x4FF1;&#x4E50;&#x90E8;&#x7684;&#x5173;&#x8054;Id,  &#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-16-%E8%8E%B7%E5%8F%96%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B-%E6%9D%AF%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E7%9A%84%E6%89%80%E6%9C%89%E6%AF%94%E8%B5%9B%E6%83%85%E5%86%B5">3.5.2.16   &#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x8054;&#x8D5B;/&#x676F;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x6240;&#x6709;&#x6BD4;&#x8D5B;&#x60C5;&#x51B5;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/matchs" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/matchs</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-17-%E8%8E%B7%E5%8F%96%E5%85%A8%E9%83%A8%E6%AF%94%E8%B5%9B">3.5.2.17 &#x83B7;&#x53D6;&#x5168;&#x90E8;&#x6BD4;&#x8D5B;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th><a href="http://data.service.9h.com/matchs" target="_blank">http://data.service.9h.com/matchs</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td>GET</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td>year: &#x8054;&#x8D5B;&#x5E74;&#x4EFD;,&#x53EF;&#x9009;<br>leagueId: &#x8054;&#x8D5B;Id,&#x53EF;&#x9009;<br>round:&#x6BD4;&#x8D5B;&#x8F6E;&#x6B21;&#xFF0C;&#x53EF;&#x9009;<br>matchStatus : &#x6BD4;&#x8D5B;&#x72B6;&#x6001;(1:&#x5DF2;&#x7ED3;&#x675F;,2:&#x6B63;&#x5728;&#x8FDB;&#x884C;&#x4E2D;,3:&#x672A;&#x5F00;&#x59CB;),&#x53EF;&#x9009;<br>pageNo,pageSize &#x53EF;&#x9009;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-18-%E7%BB%99%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E4%BF%9D%E5%AD%98%E4%B8%80%E5%9C%BA%E6%AF%94%E8%B5%9B%E4%BF%A1%E6%81%AF">3.5.2.18  &#x7ED9;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x4FDD;&#x5B58;&#x4E00;&#x573A;&#x6BD4;&#x8D5B;&#x4FE1;&#x606F;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th><a href="http://data.service.9h.com/leagues/matchs" target="_blank">http://data.service.9h.com/leagues/matchs</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td>POST</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-19-%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E4%B8%80%E5%9C%BA%E6%AF%94%E8%B5%9B%E4%BF%A1%E6%81%AF">3.5.2.19 &#x4FEE;&#x6539;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x4E00;&#x573A;&#x6BD4;&#x8D5B;&#x4FE1;&#x606F;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th><a href="http://data.service.9h.com/leagues/matchs/{leagueMatchId}" target="_blank">http://data.service.9h.com/leagues/matchs/{leagueMatchId}</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td>PUT, DELETE</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td>leagueMatchId &#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-20-%E8%8E%B7%E5%8F%96%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B-%E6%9D%AF%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E5%9C%A8%E6%9F%90%E8%BD%AE%E7%9A%84%E6%89%80%E6%9C%89%E6%AF%94%E8%B5%9B%E6%83%85%E5%86%B5">3.5.2.20  &#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x8054;&#x8D5B;/&#x676F;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x5728;&#x67D0;&#x8F6E;&#x7684;&#x6240;&#x6709;&#x6BD4;&#x8D5B;&#x60C5;&#x51B5;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/matchs/{round}" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/matchs/{round}</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;<br>round&#xFF1A;&#x6BD4;&#x8D5B;&#x8F6E;&#x6B21;&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-21-%E8%8E%B7%E5%8F%96%E6%9F%90%E5%9C%BA%E6%AF%94%E8%B5%9B%E7%9A%84%E6%83%85%E5%86%B5">3.5.2.21   &#x83B7;&#x53D6;&#x67D0;&#x573A;&#x6BD4;&#x8D5B;&#x7684;&#x60C5;&#x51B5;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/matchs/{match_id}" target="_blank">http://data.service.9h.com/matchs/{match_id}</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">match_id&#xFF1A;&#x6BD4;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-22-%E8%8E%B7%E5%8F%96%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B-%E6%9D%AF%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E7%9A%84%E6%89%80%E6%9C%89%E6%AF%94%E8%B5%9B%E7%9A%84%E8%BD%AC%E6%92%AD%E8%AE%A1%E5%88%92">3.5.2.22   &#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x8054;&#x8D5B;/&#x676F;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x6240;&#x6709;&#x6BD4;&#x8D5B;&#x7684;&#x8F6C;&#x64AD;&#x8BA1;&#x5212;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/matchs/broadcasts" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/matchs/broadcasts</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-23-%E8%8E%B7%E5%8F%96%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B-%E6%9D%AF%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E5%9C%A8%E6%9F%90%E8%BD%AE%E7%9A%84%E6%89%80%E6%9C%89%E6%AF%94%E8%B5%9B%E7%9A%84%E8%BD%AC%E6%92%AD%E8%AE%A1%E5%88%92">3.5.2.23   &#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x8054;&#x8D5B;/&#x676F;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x5728;&#x67D0;&#x8F6E;&#x7684;&#x6240;&#x6709;&#x6BD4;&#x8D5B;&#x7684;&#x8F6C;&#x64AD;&#x8BA1;&#x5212;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/matchs/{round}/broadcasts" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/matchs/{round}/broadcasts</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id : &#x8054;&#x8D5B;&#x7684;id,&#x5FC5;&#x586B;<br>year : &#x8054;&#x8D5B;&#x5E74;&#x4EFD;,&#x5FC5;&#x586B;<br>round : &#x6BD4;&#x8D5B;&#x8F6E;&#x6B21;,&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-24-%E8%8E%B7%E5%8F%96%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B-%E6%9D%AF%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E5%9C%A8%E6%9F%90%E8%BD%AE%E7%9A%84%E6%89%80%E6%9C%89%E6%AF%94%E8%B5%9B%E4%B8%8A%E5%BA%A7%E7%8E%87%E6%83%85%E5%86%B5">3.5.2.24   &#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x8054;&#x8D5B;/&#x676F;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x5728;&#x67D0;&#x8F6E;&#x7684;&#x6240;&#x6709;&#x6BD4;&#x8D5B;&#x4E0A;&#x5EA7;&#x7387;&#x60C5;&#x51B5;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/matchs/{round}" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/matchs/{round}</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;<br>round&#xFF1A;&#x6BD4;&#x8D5B;&#x8F6E;&#x6B21;&#xFF0C;&#x5FC5;&#x586B;<br>query : &#x4E0A;&#x5EA7;&#x7387;&#x53C2;&#x6570;, &#x5FC5;&#x987B;&#x4E3A; : query=seat-rat</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-2-%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E7%9A%84%E7%90%83%E9%98%9F%E7%A7%AF%E5%88%86%E6%A6%9C">3.5.2.2   &#x67D0;&#x4E2A;&#x8054;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x7403;&#x961F;&#x79EF;&#x5206;&#x699C;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/rank-club" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/rank-club</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-20-%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E7%9A%84%E5%B0%84%E6%89%8B%E6%A6%9C">3.5.2.20   &#x67D0;&#x4E2A;&#x8054;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x5C04;&#x624B;&#x699C;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/rank-goal" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/rank-goal</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">POST : &#x7ED9;&#x5C04;&#x624B;&#x699C;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">DELETE : &#x5220;&#x9664;&#x67D0;&#x4E2A;&#x5C04;&#x624B;&#x699C;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-21-%E4%BF%AE%E6%94%B9%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E7%9A%84%E6%9F%90%E4%B8%AA%E5%B0%84%E6%89%8B%E6%A6%9C">3.5.2.21  &#x4FEE;&#x6539;&#x67D0;&#x4E2A;&#x8054;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x67D0;&#x4E2A;&#x5C04;&#x624B;&#x699C;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/rank-goal/{LeagueRankGoalId}" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/rank-goal/{LeagueRankGoalId}</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">LeagueRankGoalId : &#x5C04;&#x624B;&#x699C; id , &#x5FC5;&#x586B;<br>league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET : &#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x5C04;&#x624B;&#x699C;&#x4E0A;&#x7684;&#x4E00;&#x6761;&#x4FE1;&#x606F;<br>DELETE : &#x5220;&#x9664;&#x67D0;&#x4E2A;&#x5C04;&#x624B;&#x699C;&#x4E0A;&#x7684;&#x4E00;&#x6761;&#x4FE1;&#x606F; <br>PUT : &#x65B0;&#x5C04;&#x624B;&#x699C;&#x4E0A;&#x7684;&#x4E00;&#x6761;&#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-22-%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E7%9A%84%E5%8A%A9%E6%94%BB%E6%A6%9C">3.5.2.22   &#x67D0;&#x4E2A;&#x8054;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x52A9;&#x653B;&#x699C;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/rank-assistant" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/rank-assistant</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET , POST</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">DELETE : &#x5220;&#x9664;&#x67D0;&#x4E2A;&#x8054;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x4E00;&#x7EC4;&#x52A9;&#x653B;&#x699C;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">ids &#x5FC5;&#x586B;(ids=1,2,3)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-23-%E4%BF%AE%E6%94%B9%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E7%9A%84%E5%8A%A9%E6%94%BB%E6%A6%9C%E4%BF%A1%E6%81%AF">3.5.2.23   &#x4FEE;&#x6539;&#x67D0;&#x4E2A;&#x8054;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x52A9;&#x653B;&#x699C;&#x4FE1;&#x606F;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/rank-assistant/{AssistantId}" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/rank-assistant/{AssistantId}</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET , DELTE , PUT</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-24-%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E7%9A%84%E7%BA%A2%E9%BB%84%E7%89%8C%E6%A6%9C">3.5.2.24   &#x67D0;&#x4E2A;&#x8054;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x7EA2;&#x9EC4;&#x724C;&#x699C;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/rank-card" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/rank-card</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET , POST</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">DELETE : &#x5220;&#x9664;&#x4E00;&#x7EC4;&#x67D0;&#x4E2A;&#x8054;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x7EA2;&#x9EC4;&#x724C;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">ids  &#x5FC5;&#x586B;, (ids=12,14,25)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-25-%E4%BF%AE%E6%94%B9%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E7%9A%84%E7%BA%A2%E9%BB%84%E7%89%8C%E6%A6%9C">3.5.2.25   &#x4FEE;&#x6539;&#x67D0;&#x4E2A;&#x8054;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x7EA2;&#x9EC4;&#x724C;&#x699C;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/rank-card/{rankCardId}" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/rank-card/{rankCardId}</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET , POST</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;<br>rankCardId : &#x7EA2;&#x9EC4;&#x724C;&#x699C;&#x4FE1;&#x606F;id</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-26-%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E7%9A%84%E5%85%AC%E5%B9%B3%E7%AB%9E%E8%B5%9B%E6%A6%9C">3.5.2.26  &#x67D0;&#x4E2A;&#x8054;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x516C;&#x5E73;&#x7ADE;&#x8D5B;&#x699C;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/rank-peace" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/rank-peace</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET ,POST</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-27-%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E7%9A%84%E5%85%AC%E5%B9%B3%E7%AB%9E%E8%B5%9B%E6%A6%9C">3.5.2.27  &#x67D0;&#x4E2A;&#x8054;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x516C;&#x5E73;&#x7ADE;&#x8D5B;&#x699C;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/rank-peace" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/rank-peace</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET ,POST, DELETE</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;<br>ids  &#x5FC5;&#x586B;, (ids=12,14,25)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-27-%E4%BF%AE%E6%94%B9%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E7%9A%84%E5%85%AC%E5%B9%B3%E7%AB%9E%E8%B5%9B%E6%A6%9C">3.5.2.27  &#x4FEE;&#x6539;&#x67D0;&#x4E2A;&#x8054;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x516C;&#x5E73;&#x7ADE;&#x8D5B;&#x699C;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/rank-peace/{rankPeaceId}" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/rank-peace/{rankPeaceId}</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET ,PUT</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;<br>rankPeaceId : &#x516C;&#x5E73;&#x7ADE;&#x8D5B;&#x699C;id, &#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-28-%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E7%9A%84%E5%8D%87%E9%99%8D%E7%BA%A7%E6%83%85%E5%86%B5">3.5.2.28  &#x67D0;&#x4E2A;&#x8054;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x5347;&#x964D;&#x7EA7;&#x60C5;&#x51B5;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/updown" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/updown</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET ,POST</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-29-%E4%BF%AE%E6%94%B9%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E7%9A%84%E5%8D%87%E9%99%8D%E7%BA%A7%E6%83%85%E5%86%B5">3.5.2.29  &#x4FEE;&#x6539;&#x67D0;&#x4E2A;&#x8054;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x5347;&#x964D;&#x7EA7;&#x60C5;&#x51B5;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/updown/{leagueUpdownId}" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/updown/{leagueUpdownId}</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET ,PUT</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;<br>leagueUpdownId : &#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-5-2-30-%E6%9F%90%E4%B8%AA%E8%81%94%E8%B5%9B%E5%9C%A8%E6%9F%90%E5%B9%B4%E7%9A%84%E6%9C%80%E4%BD%B3%E8%AF%84%E9%80%89">3.5.2.30   &#x67D0;&#x4E2A;&#x8054;&#x8D5B;&#x5728;&#x67D0;&#x5E74;&#x7684;&#x6700;&#x4F73;&#x8BC4;&#x9009;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x63A5;&#x53E3;&#x5730;&#x5740;</th>
+<th style="text-align:left"><a href="http://data.service.9h.com/leagues/{league_id}/{year}/outstanding" target="_blank">http://data.service.9h.com/leagues/{league_id}/{year}/outstanding</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</td>
+<td style="text-align:left">GET ,POST</td>
+</tr>
+<tr>
+<td>&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">league_id&#xFF1A;&#x8054;&#x8D5B;&#x7684;id&#xFF0C;&#x5FC5;&#x586B;<br>year&#xFF1A;&#x8054;&#x8D5B;&#x5E74;&#x4EFD;&#xFF0C;&#x5FC5;&#x586B;</td>
+</tr>
+</tbody>
+</table>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../3子服务系统/303CslDataSysModel.html" class="navigation navigation-prev " aria-label="Previous page: 数据子系统数据模型"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../3子服务系统/304GroupSysIntro.html" class="navigation navigation-next " aria-label="Next page: 圈子"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":"white","family":"serif","size":1}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
