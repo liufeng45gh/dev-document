@@ -282,9 +282,71 @@ POST http://group.service.9h.com/v1/topics/{topic_id}/replys/{reply_id}/comments
 
 POST http://group.service.9h.com/v1/topics/{topic_id}/praisies
 
+@param topicId  @PathVariable(value = "topic_id") 主贴id
+
+@param praise  {authorId:"xxxxx"}
+
+返回json: 
+
+```
+{
+    "oper_code": "1",
+    "data": null  
+}
+```
+
 #### 取消赞主贴
 
-DELETE http://group.service.9h.com/v1/topics/{topic_id}/praises/{praise_id}
+DELETE http://group.service.9h.com/v1/topics/{topic_id}/praises
+
+@param topicId  @PathVariable(value = "topic_id") 主贴id
+
+@param praise  {authorId:"xxxxx"}
+
+返回json: 
+
+```
+{
+    "oper_code": "1",
+    "data": null  
+}
+```
+
+
+
+#### 赞跟贴
+
+POST http://group.service.9h.com/v1/topics/replys/{reply_id}/praisies
+
+@param replyId  @PathVariable(value = "reply_id") 跟帖id
+
+@param praise  {authorId:"xxxxx"}
+
+返回json: 
+
+```
+{
+    "oper_code": "1",
+    "data": null  
+}
+```
+
+#### 取消赞跟贴
+
+DELETE http://group.service.9h.com/v1/topics/replys/{reply_id}/praisies
+
+@param replyId  @PathVariable(value = "reply_id") 跟帖id
+
+@param praise  {authorId:"xxxxx"}
+
+返回json: 
+
+```
+{
+    "oper_code": "1",
+    "data": null  
+}
+```
 
 #### 分享主贴
 
