@@ -1,0 +1,934 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>用户子系统接口 | CSL中超官方移动互联网产品系统设计书</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.0.1">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../3子服务系统/302NewsSysIntro.html" />
+    
+    
+    <link rel="prev" href="../3子服务系统/301UserSysModel.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    <div class="book" data-level="3.1.2" data-basepath=".." data-revision="Thu Nov 19 2015 14:42:17 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+            
+            <li>
+                <a href="http://www.9hcom.com" target="blank" class="custom-link">Copyright 九合体育 2015</a>
+            </li>
+        
+        
+
+        
+        <li class="divider"></li>
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="1产品设计/index.html">
+            
+                
+                    <a href="../1产品设计/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        产品设计
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="1产品设计/101ProductDesign.html">
+            
+                
+                    <a href="../1产品设计/101ProductDesign.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        功能
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="2概要设计/index.html">
+            
+                
+                    <a href="../2概要设计/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        研发设计
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="2概要设计/201VisualDesign.html">
+            
+                
+                    <a href="../2概要设计/201VisualDesign.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        设计Wiki
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="2概要设计/202DevelopDesign.html">
+            
+                
+                    <a href="../2概要设计/202DevelopDesign.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        技术Wiki
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="2概要设计/203DevelopArch.html">
+            
+                
+                    <a href="../2概要设计/203DevelopArch.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        系统架构
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="3子服务系统/index.html">
+            
+                
+                    <a href="../3子服务系统/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        子服务系统
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="3子服务系统/301UserSysIntro.html">
+            
+                
+                    <a href="../3子服务系统/301UserSysIntro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        用户
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="3子服务系统/301UserSysModel.html">
+            
+                
+                    <a href="../3子服务系统/301UserSysModel.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.1.</b>
+                        
+                        用户子系统数据模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.1.2" data-path="3子服务系统/301UserSysApi.html">
+            
+                
+                    <a href="../3子服务系统/301UserSysApi.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.2.</b>
+                        
+                        用户子系统接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="3子服务系统/302NewsSysIntro.html">
+            
+                
+                    <a href="../3子服务系统/302NewsSysIntro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        新闻
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="3子服务系统/302NewsSysModel.html">
+            
+                
+                    <a href="../3子服务系统/302NewsSysModel.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.1.</b>
+                        
+                        新闻系统数据模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="3子服务系统/302NewsSysApi.html">
+            
+                
+                    <a href="../3子服务系统/302NewsSysApi.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.2.</b>
+                        
+                        新闻系统接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="3子服务系统/310AdSysIntro.html">
+            
+                
+                    <a href="../3子服务系统/310AdSysIntro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        广告
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="3子服务系统/310AdSysModel.html">
+            
+                
+                    <a href="../3子服务系统/310AdSysModel.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.1.</b>
+                        
+                        广告子系统数据模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="3子服务系统/310AdSysApi.html">
+            
+                
+                    <a href="../3子服务系统/310AdSysApi.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.2.</b>
+                        
+                        广告子系统接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="3子服务系统/303CslDataSysIntro.html">
+            
+                
+                    <a href="../3子服务系统/303CslDataSysIntro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        数据
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="3子服务系统/303CslDataSysModel.html">
+            
+                
+                    <a href="../3子服务系统/303CslDataSysModel.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.1.</b>
+                        
+                        数据子系统数据模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="3子服务系统/303CslDataSysApi.html">
+            
+                
+                    <a href="../3子服务系统/303CslDataSysApi.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.</b>
+                        
+                        数据子系统接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="3子服务系统/304GroupSysIntro.html">
+            
+                
+                    <a href="../3子服务系统/304GroupSysIntro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        圈子
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="3子服务系统/304GroupSysModel.html">
+            
+                
+                    <a href="../3子服务系统/304GroupSysModel.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.1.</b>
+                        
+                        圈子子系统数据模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="3子服务系统/304GroupSysApi.html">
+            
+                
+                    <a href="../3子服务系统/304GroupSysApi.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.2.</b>
+                        
+                        圈子子系统接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="3子服务系统/305EntertainmentSys.html">
+            
+                
+                    <a href="../3子服务系统/305EntertainmentSys.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        娱乐
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="3子服务系统/306ShopSys.html">
+            
+                
+                    <a href="../3子服务系统/306ShopSys.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        商城
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="3子服务系统/307PaySys.html">
+            
+                
+                    <a href="../3子服务系统/307PaySys.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        支付
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="3子服务系统/308NotificationSys.html">
+            
+                
+                    <a href="../3子服务系统/308NotificationSys.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        推送
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="3子服务系统/309AppManageSysIntro.html">
+            
+                
+                    <a href="../3子服务系统/309AppManageSysIntro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.</b>
+                        
+                        App管理
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1" data-path="3子服务系统/309AppManageSysModel.html">
+            
+                
+                    <a href="../3子服务系统/309AppManageSysModel.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.1.</b>
+                        
+                        设置类子系统数据模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.2" data-path="3子服务系统/309AppManageSysApi.html">
+            
+                
+                    <a href="../3子服务系统/309AppManageSysApi.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.2.</b>
+                        
+                        设置类子系统接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="4API网关/index.html">
+            
+                
+                    <a href="../4API网关/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        API网关
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="4API网关/401Specific.html">
+            
+                
+                    <a href="../4API网关/401Specific.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        设计规格
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="4API网关/402API.html">
+            
+                
+                    <a href="../4API网关/402API.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        网关接口
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="4API网关/403APIManage.html">
+            
+                
+                    <a href="../4API网关/403APIManage.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        网关管理
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="5后台管理/index.html">
+            
+                
+                    <a href="../5后台管理/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        后台管理
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="5后台管理/501MISys.html">
+            
+                
+                    <a href="../5后台管理/501MISys.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        后台管理
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" >
+            
+            <span><b>6.</b> [求球]</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="qq/qq-api.html">
+            
+                
+                    <a href="../qq/qq-api.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        API
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >CSL中超官方移动互联网产品系统设计书</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h3 id="3-1-2-%E7%94%A8%E6%88%B7%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E6%8E%A5%E5%8F%A3">3.1.2. &#x7528;&#x6237;&#x7CFB;&#x7EDF;&#x670D;&#x52A1;&#x63A5;&#x53E3;</h3>
+<h4 id="3-1-2-0-%E7%94%A8%E6%88%B7%E6%89%8B%E6%9C%BA%E4%B8%8B%E5%8F%91%E9%AA%8C%E8%AF%81%E7%A0%81">3.1.2.0. &#x7528;&#x6237;&#x624B;&#x673A;&#x4E0B;&#x53D1;&#x9A8C;&#x8BC1;&#x7801;</h4>
+<p>POST <a href="https://api-csl.9h-sports.com/v1/user/phone-sms" target="_blank">https://api-csl.9h-sports.com/v1/user/phone-sms</a></p>
+<p>&#x4E0A;&#x9001;: BODY: { &quot;phone&quot; : &quot;135xxxxxx&quot;}</p>
+<p>&#x8FD4;&#x56DE;: {oper_code:1}</p>
+<p>&#x6CE8;: &#x8BE5;&#x63A5;&#x53E3;&#x4F1A;&#x7EE7;&#x7EED;&#x8C03;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x7CFB;&#x7EDF;[&#x77ED;&#x4FE1;&#x5E73;&#x53F0;]&#x8FDB;&#x884C;&#x77ED;&#x4FE1;&#x4E0B;&#x53D1;
+    &#x8BE5;&#x63A5;&#x53E3;&#x6BCF;&#x4E2A;&#x624B;&#x673A;&#x53F7;24&#x5C0F;&#x65F6;&#x5185;&#x9650;&#x5236;&#x53D1;&#x9001;5&#x6B21;,&#x540C;&#x4E00;&#x4E2A;ip24&#x5C0F;&#x65F6;&#x5185;&#x9650;&#x5236;20&#x6B21;(&#x540C;&#x4E00;&#x4E2A;&#x516C;&#x53F8;&#x51FA;&#x53BB;&#x7684;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x540C;&#x4E00;&#x4E2A;ip)
+    (&#x6B64;&#x63A5;&#x53E3;&#x505A;&#x538B;&#x6D4B;&#x8981;&#x8C28;&#x614E;,&#x6700;&#x597D;&#x8DDF;&#x6613;&#x7F8E;&#x90A3;&#x8FB9;&#x5148;&#x6C9F;&#x901A;&#xFF0C;&#x6216;&#x8005;&#x4E0D;&#x9002;&#x5408;&#x505A;&#x538B;&#x6D4B;)</p>
+<h4 id="3-1-2-1-%E6%AF%94%E8%BE%83%E9%AA%8C%E8%AF%81%E7%A0%81">3.1.2.1. &#x6BD4;&#x8F83;&#x9A8C;&#x8BC1;&#x7801;</h4>
+<p>POST <a href="https://api-csl.9h-sports.com/v1/user/phone-checks" target="_blank">https://api-csl.9h-sports.com/v1/user/phone-checks</a></p>
+<p>&#x4E0A;&#x9001;: BODY: { &quot;telephone&quot; : &quot;135xxxxxx&quot;,&quot;code&quot;:&quot;1234&quot;}</p>
+<p>&#x8FD4;&#x56DE;: {oper_code:1}}</p>
+<p>&#x6CE8;: &#x8BE5;&#x63A5;&#x53E3;&#x4F1A;&#x6BD4;&#x8F83;&#x7528;&#x6237;&#x63D0;&#x4EA4;&#x7684;&#x9A8C;&#x8BC1;&#x7801;&#x548C;&#x53D1;&#x7ED9;&#x7528;&#x6237;&#x7684;&#x662F;&#x5426;&#x4E00;&#x81F4;</p>
+<h4 id="3-1-2-2-%E7%94%A8%E6%88%B7%E6%89%8B%E6%9C%BA-%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B3%A8%E5%86%8C%E6%96%B0%E7%94%A8%E6%88%B7">3.1.2.2. &#x7528;&#x6237;&#x624B;&#x673A;+&#x9A8C;&#x8BC1;&#x7801;&#x6CE8;&#x518C;&#x65B0;&#x7528;&#x6237;</h4>
+<p>POST <a href="https://api-csl.9h-sports.com/v1/user/registers" target="_blank">https://api-csl.9h-sports.com/v1/user/registers</a></p>
+<p>&#x4E0A;&#x9001;: BODY: {phone:&quot;18610814074&quot;,code:&quot;xxxxxx&quot;,password:&quot;xxxxxxx&quot;,rePassword:&quot;xxxxxx&quot;}</p>
+<p>&#x8FD4;&#x56DE;: {oper_code:1,data:&quot;token-Characters&quot;}</p>
+<p>&#x6CE8;: &#x8BE5;&#x63A5;&#x53E3;&#x4F1A;&#x9700;&#x8981;&#x4F20;&#x5165; &#x624B;&#x673A;&#x53F7;,&#x9A8C;&#x8BC1;&#x7801;,&#x5BC6;&#x7801;&#xFF0C;&#x91CD;&#x590D;&#x5BC6;&#x7801;</p>
+<h4 id="3-1-2-3-%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81">3.1.2.3. &#x91CD;&#x7F6E;&#x5BC6;&#x7801;</h4>
+<p>POST <a href="https://api-csl.9h-sports.com/v1/user/reset-pass" target="_blank">https://api-csl.9h-sports.com/v1/user/reset-pass</a></p>
+<p>&#x4E0A;&#x9001;: BODY: {phone:&quot;18610814074&quot;,code:&quot;xxxxxx&quot;,password:&quot;xxxxxxx&quot;,rePassword:&quot;xxxxxx&quot;}</p>
+<p>&#x8FD4;&#x56DE;: {oper_code:1}</p>
+<p>&#x6CE8;: &#x8BE5;&#x63A5;&#x53E3;&#x4F1A;&#x9700;&#x8981;&#x4F20;&#x5165; &#x624B;&#x673A;&#x53F7;,&#x9A8C;&#x8BC1;&#x7801;,&#x5BC6;&#x7801;&#xFF0C;&#x91CD;&#x590D;&#x5BC6;&#x7801;</p>
+<h4 id="3-1-2-4-%E7%BB%91%E5%AE%9A%E6%89%8B%E6%9C%BA">3.1.2.4. &#x7ED1;&#x5B9A;&#x624B;&#x673A;</h4>
+<p>POST <a href="https://api-csl.9h-sports.com/v1/user/bind-phone/{user_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/bind-phone/{user_id}</a></p>
+<p>&#x4E0A;&#x9001;: BODY: {phone:&quot;18610814074&quot;,code:&quot;xxxxxx&quot;,password:&quot;xxxxxxx&quot;,rePassword:&quot;xxxxxx&quot;}</p>
+<p>&#x8FD4;&#x56DE;: {oper_code:1}</p>
+<p>&#x6CE8;: &#x8BE5;&#x63A5;&#x53E3;&#x4F1A;&#x9700;&#x8981;&#x4F20;&#x5165; &#x624B;&#x673A;&#x53F7;,&#x9A8C;&#x8BC1;&#x7801;,&#x5BC6;&#x7801;&#xFF0C;&#x91CD;&#x590D;&#x5BC6;&#x7801;</p>
+<h4 id="3-1-2-4-%E4%BB%8E%E6%96%B0%E7%BB%91%E5%AE%9A%E6%89%8B%E6%9C%BA">3.1.2.4. &#x4ECE;&#x65B0;&#x7ED1;&#x5B9A;&#x624B;&#x673A;</h4>
+<p>POST <a href="https://api-csl.9h-sports.com/v1/user/re-bind-phone/{user_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/re-bind-phone/{user_id}</a></p>
+<p>&#x4E0A;&#x9001;: BODY: {phone:&quot;18610814074&quot;,code:&quot;xxxxxx&quot;,password:&quot;xxxxxxx&quot;}</p>
+<p>&#x8FD4;&#x56DE;: {oper_code:1}</p>
+<p>&#x6CE8;: &#x8BE5;&#x63A5;&#x53E3;&#x4F1A;&#x9700;&#x8981;&#x4F20;&#x5165; &#x624B;&#x673A;&#x53F7;,&#x9A8C;&#x8BC1;&#x7801;,&#x5BC6;&#x7801; &#x8FD8;&#x9700;&#x8981;token</p>
+<h4 id="3-1-2-5-%E6%AF%94%E8%BE%83%E5%AF%86%E7%A0%81">3.1.2.5. &#x6BD4;&#x8F83;&#x5BC6;&#x7801;</h4>
+<p>POST <a href="https://api-csl.9h-sports.com/v1/user/check-password" target="_blank">https://api-csl.9h-sports.com/v1/user/check-password</a></p>
+<p>&#x4E0A;&#x9001;: BODY: {userId:&quot;xxxx&quot;,password:&quot;xxxxxxx&quot;}</p>
+<p>&#x8FD4;&#x56DE;: {oper_code:1}</p>
+<p>&#x6CE8;: &#x8BE5;&#x63A5;&#x53E3;&#x9700;&#x8981;token</p>
+<h4 id="3-1-2-5-%E6%A3%80%E6%9F%A5%E6%89%8B%E6%9C%BA%E6%98%AF%E5%90%A6%E5%B7%B2%E7%BB%8F%E6%B3%A8%E5%86%8C">3.1.2.5. &#x68C0;&#x67E5;&#x624B;&#x673A;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x6CE8;&#x518C;</h4>
+<p>GET <a href="https://api-csl.9h-sports.com/v1/user/is-phone-exist/{phone}" target="_blank">https://api-csl.9h-sports.com/v1/user/is-phone-exist/{phone}</a></p>
+<p>&#x8FD4;&#x56DE;: {oper_code:1}</p>
+<h4 id="3-1-2-6-%E7%99%BB%E5%BD%95">3.1.2.6. &#x767B;&#x5F55;</h4>
+<p>POST <a href="https://api-csl.9h-sports.com/v1/user/logins" target="_blank">https://api-csl.9h-sports.com/v1/user/logins</a></p>
+<p>&#x4E0A;&#x9001; :BODY : &#x8D26;&#x53F7;&#x767B;&#x9646; {phone:&quot;18610814074&quot;,password:&quot;xxxxxxx&quot;}, &#x5FAE;&#x535A;&#x767B;&#x9646;{weiboId:&quot;xxxxxxx&quot;,accessToken:&quot;xxxxxxxxxx&quot;},&#x5FAE;&#x4FE1;&#x767B;&#x9646;{weixinId:&quot;xxxxxxx&quot;,accessToken:&quot;xxxxxxxxxx&quot;}</p>
+<p>&#x8FD4;&#x56DE; : {oper_code:1,message:&quot;xxxxx&quot;}</p>
+<h4 id="3-1-2-7-%E7%94%A8%E6%88%B7%E7%99%BB%E5%87%BA%E7%B3%BB%E7%BB%9F">3.1.2.7. &#x7528;&#x6237;&#x767B;&#x51FA;&#x7CFB;&#x7EDF;</h4>
+<p>DELETE <a href="https://api-csl.9h-sports.com/v1/user/logins/{user_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/logins/{user_id}</a></p>
+<h4 id="3-1-2-8-%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%AA%E6%B3%A8%E5%86%8C%E7%9A%84%E7%94%A8%E6%88%B7-%E7%9B%AE%E5%89%8D%E8%BF%98%E6%9C%AA%E4%BD%BF%E7%94%A8">3.1.2.8. &#x5220;&#x9664;&#x67D0;&#x4E2A;&#x6CE8;&#x518C;&#x7684;&#x7528;&#x6237; (&#x76EE;&#x524D;&#x8FD8;&#x672A;&#x4F7F;&#x7528;)</h4>
+<p>DELETE <a href="https://api-csl.9h-sports.com/v1/user/registers/{user_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/registers/{user_id}</a></p>
+<h4 id="3-1-2-9-%E4%B8%8A%E4%BC%A0%E8%AE%BE%E5%A4%87-device-token">3.1.2.9. &#x4E0A;&#x4F20;&#x8BBE;&#x5907; device_token</h4>
+<p>POST <a href="https://api-csl.9h-sports.com/v1/user/upload-device" target="_blank">https://api-csl.9h-sports.com/v1/user/upload-device</a></p>
+<p>request: {deviceToken:&quot;xxxxxxxxxxxx&quot;,userId:&quot;xxx&quot;,osType:&quot;android&quot;,osVersion:&quot;version&quot;}</p>
+<p>response:{oper_code:1}</p>
+<h2 id="%E6%B3%A8-%E4%BB%A5%E4%B8%8A%E5%85%A8%E9%83%A8%E6%8E%A5%E5%8F%A3%E9%83%BD%E6%98%AF%E5%AF%B9user%E5%AF%B9%E8%B1%A1%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C%EF%BC%8C%E4%BB%A5%E4%B8%8B%E6%98%AF%E5%AF%B9user-info%E5%AF%B9%E8%B1%A1%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C">&#x6CE8;: &#x4EE5;&#x4E0A;&#x5168;&#x90E8;&#x63A5;&#x53E3;&#x90FD;&#x662F;&#x5BF9;user&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x5BF9;user_info&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;</h2>
+<h4 id="%E8%8E%B7%E5%8F%96%E6%9F%90%E4%B8%AA%E7%94%A8%E6%88%B7%E8%AF%A6%E7%BB%86%E8%B5%84%E6%96%99">&#x83B7;&#x53D6;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x8BE6;&#x7EC6;&#x8D44;&#x6599;</h4>
+<p>GET  <a href="https://api-csl.9h-sports.com/v1/user/users/{user_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/users/{user_id}</a></p>
+<h4 id="%E6%9B%B4%E6%96%B0%E6%9F%90%E4%B8%AA%E7%94%A8%E6%88%B7%E8%AF%A6%E7%BB%86%E8%B5%84%E6%96%99">&#x66F4;&#x65B0;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x8BE6;&#x7EC6;&#x8D44;&#x6599;</h4>
+<p>POST  <a href="https://api-csl.9h-sports.com/v1/user/users/{user_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/users/{user_id}</a></p>
+<p>request : {userId:1,nickName:&quot;xxx&quot;,avatar:&quot;<a href="http://xxx.png&quot;}" target="_blank">http://xxx.png&quot;}</a> cookie: token</p>
+<p>response : {oper_code:1}</p>
+<h4 id="%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E7%AD%89%E7%BA%A7%E4%BF%A1%E6%81%AF">&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x7B49;&#x7EA7;&#x4FE1;&#x606F;</h4>
+<p>POST <a href="https://api-csl.9h-sports.com/v1/user/user-level/{user_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/user-level/{user_id}</a></p>
+<h4 id="%E7%94%A8%E6%88%B7%E5%85%B3%E6%B3%A8%E4%BF%B1%E4%B9%90%E9%83%A8">&#x7528;&#x6237;&#x5173;&#x6CE8;&#x4FF1;&#x4E50;&#x90E8;</h4>
+<p>POST <a href="https://api-csl.9h-sports.com/v1/user/user-club-stars/{user_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/user-club-stars/{user_id}</a></p>
+<p>request: {clubId:&apos;xxxx&apos;}</p>
+<p>response: {oper_code:1,data: clubObject}</p>
+<h4 id="%E7%94%A8%E6%88%B7%E5%8F%96%E6%B6%88%E5%85%B3%E6%B3%A8%E4%BF%B1%E4%B9%90%E9%83%A8">&#x7528;&#x6237;&#x53D6;&#x6D88;&#x5173;&#x6CE8;&#x4FF1;&#x4E50;&#x90E8;</h4>
+<p>DELETE <a href="https://api-csl.9h-sports.com/v1/user/user-club-stars/{user_id}/{club_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/user-club-stars/{user_id}/{club_id}</a></p>
+<h4 id="%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E5%85%B3%E6%B3%A8%E7%9A%84%E6%89%80%E6%9C%89%E4%BF%B1%E4%B9%90%E9%83%A8">&#x83B7;&#x53D6;&#x7528;&#x6237;&#x5173;&#x6CE8;&#x7684;&#x6240;&#x6709;&#x4FF1;&#x4E50;&#x90E8;</h4>
+<p>GET <a href="https://api-csl.9h-sports.com/v1/user/user-club-stars/{user_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/user-club-stars/{user_id}</a></p>
+<p>response: {clubs: clubObjects}</p>
+<hr>
+<h4 id="%E7%94%A8%E6%88%B7%E5%85%B3%E6%B3%A8%E6%AF%94%E8%B5%9B">&#x7528;&#x6237;&#x5173;&#x6CE8;&#x6BD4;&#x8D5B;</h4>
+<p>POST <a href="https://api-csl.9h-sports.com/v1/user/user-match-stars/{user_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/user-match-stars/{user_id}</a></p>
+<p>request: {matchId:xxxx}</p>
+<h4 id="%E7%94%A8%E6%88%B7%E5%8F%96%E6%B6%88%E5%85%B3%E6%B3%A8%E6%AF%94%E8%B5%9B">&#x7528;&#x6237;&#x53D6;&#x6D88;&#x5173;&#x6CE8;&#x6BD4;&#x8D5B;</h4>
+<p>DELETE <a href="https://api-csl.9h-sports.com/v1/user/user-match-stars/{user_id}/{match_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/user-match-stars/{user_id}/{match_id}</a></p>
+<h4 id="%E7%94%A8%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E5%85%B3%E6%B3%A8%E7%9A%84%E6%89%80%E6%9C%89%E6%AF%94%E8%B5%9B">&#x7528;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x5173;&#x6CE8;&#x7684;&#x6240;&#x6709;&#x6BD4;&#x8D5B;</h4>
+<p>GET <a href="https://api-csl.9h-sports.com/v1/user/user-match-stars/{user_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/user-match-stars/{user_id}</a></p>
+<hr>
+<h4 id="%E7%94%A8%E6%88%B7%E8%8E%B7%E5%8F%96%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%B3%E6%B3%A8%E4%BB%96%E4%BA%BA%E5%88%97%E8%A1%A8-2-0%E6%9C%AA%E5%AE%9E%E7%8E%B0">&#x7528;&#x6237;&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x5173;&#x6CE8;&#x4ED6;&#x4EBA;&#x5217;&#x8868;(2.0&#x672A;&#x5B9E;&#x73B0;)</h4>
+<p>GET <a href="http://user.service.9h.com/user-follows/{user_id}" target="_blank">http://user.service.9h.com/user-follows/{user_id}</a></p>
+<h4 id="%E7%94%A8%E6%88%B7%E5%85%B3%E6%B3%A8%E5%85%B6%E4%BB%96%E7%94%A8%E6%88%B7-2-0%E6%9C%AA%E5%AE%9E%E7%8E%B0">&#x7528;&#x6237;&#x5173;&#x6CE8;&#x5176;&#x4ED6;&#x7528;&#x6237;(2.0&#x672A;&#x5B9E;&#x73B0;)</h4>
+<p>POST <a href="http://user.service.9h.com/user-follows/{user_id}" target="_blank">http://user.service.9h.com/user-follows/{user_id}</a></p>
+<h4 id="%E7%94%A8%E6%88%B7%E5%8F%96%E6%B6%88%E5%85%B3%E6%B3%A8%E5%85%B6%E4%BB%96%E7%94%A8%E6%88%B7-2-0%E6%9C%AA%E5%AE%9E%E7%8E%B0">&#x7528;&#x6237;&#x53D6;&#x6D88;&#x5173;&#x6CE8;&#x5176;&#x4ED6;&#x7528;&#x6237;(2.0&#x672A;&#x5B9E;&#x73B0;)</h4>
+<p>DELETE <a href="http://user.service.9h.com/user-follows/{user_id}/{user_id}" target="_blank">http://user.service.9h.com/user-follows/{user_id}/{user_id}</a></p>
+<h4 id="%E7%94%A8%E6%88%B7%E8%8E%B7%E5%8F%96%E8%87%AA%E5%B7%B1%E7%9A%84%E8%A2%AB%E5%85%B3%E6%B3%A8%E5%88%97%E8%A1%A8-2-0%E6%9C%AA%E5%AE%9E%E7%8E%B0">&#x7528;&#x6237;&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x88AB;&#x5173;&#x6CE8;&#x5217;&#x8868;(2.0&#x672A;&#x5B9E;&#x73B0;)</h4>
+<p>GET <a href="http://user.service.9h.com/user-follow-bys/{user_id}" target="_blank">http://user.service.9h.com/user-follow-bys/{user_id}</a></p>
+<h4 id="%E7%94%A8%E6%88%B7%E8%8E%B7%E5%BE%97%E4%B8%80%E6%AC%A1%E8%A2%AB%E5%85%B3%E6%B3%A8-2-0%E6%9C%AA%E5%AE%9E%E7%8E%B0">&#x7528;&#x6237;&#x83B7;&#x5F97;&#x4E00;&#x6B21;&#x88AB;&#x5173;&#x6CE8;(2.0&#x672A;&#x5B9E;&#x73B0;)</h4>
+<p>POST <a href="http://user.service.9h.com/user-follow-bys/{user_id}" target="_blank">http://user.service.9h.com/user-follow-bys/{user_id}</a></p>
+<h4 id="%E7%94%A8%E6%88%B7%E4%BB%8E%E8%A2%AB%E5%85%B3%E6%B3%A8%E5%88%97%E8%A1%A8%E4%B8%AD%E5%B1%8F%E8%94%BD%E5%85%B3%E6%B3%A8%E8%87%AA%E5%B7%B1%E7%9A%84%E7%94%A8%E6%88%B7-2-0%E6%9C%AA%E5%AE%9E%E7%8E%B0">&#x7528;&#x6237;&#x4ECE;&#x88AB;&#x5173;&#x6CE8;&#x5217;&#x8868;&#x4E2D;&#x5C4F;&#x853D;&#x5173;&#x6CE8;&#x81EA;&#x5DF1;&#x7684;&#x7528;&#x6237;(2.0&#x672A;&#x5B9E;&#x73B0;)</h4>
+<p>DELETE <a href="http://user.service.9h.com/user-follow-bys/{user_id}/{user_id}" target="_blank">http://user.service.9h.com/user-follow-bys/{user_id}/{user_id}</a></p>
+<hr>
+<h4 id="%E7%94%A8%E6%88%B7%E8%8E%B7%E5%8F%96%E8%87%AA%E5%B7%B1%E7%9A%84%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0%E8%AE%B0%E5%BD%95">&#x7528;&#x6237;&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x6BCF;&#x65E5;&#x7B7E;&#x5230;&#x8BB0;&#x5F55;</h4>
+<p>GET <a href="https://api-csl.9h-sports.com/v1/user/user-check-ins/{user_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/user-check-ins/{user_id}</a></p>
+<h4 id="%E7%94%A8%E6%88%B7%E7%AD%BE%E5%88%B0">&#x7528;&#x6237;&#x7B7E;&#x5230;</h4>
+<p>POST <a href="https://api-csl.9h-sports.com/v1/user/user-check-ins/{user_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/user-check-ins/{user_id}</a></p>
+<h4 id="%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BB%8A%E5%A4%A9%E7%9A%84%E7%AD%BE%E5%88%B0%E7%8A%B6%E6%80%81">&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4ECA;&#x5929;&#x7684;&#x7B7E;&#x5230;&#x72B6;&#x6001;</h4>
+<p>GET <a href="https://api-csl.9h-sports.com/v1/user/get-user-check-ins/{user_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/get-user-check-ins/{user_id}</a></p>
+<h4 id="%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E7%AD%BE%E5%88%B0%E6%8E%92%E8%A1%8C">&#x83B7;&#x53D6;&#x7528;&#x6237;&#x7B7E;&#x5230;&#x6392;&#x884C;</h4>
+<p>GET <a href="https://api-csl.9h-sports.com/v1/user/user-checkin-rank/{user_id}" target="_blank">https://api-csl.9h-sports.com/v1/user/user-checkin-rank/{user_id}</a></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../3子服务系统/301UserSysModel.html" class="navigation navigation-prev " aria-label="Previous page: 用户子系统数据模型"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../3子服务系统/302NewsSysIntro.html" class="navigation navigation-next " aria-label="Next page: 新闻"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":"white","family":"serif","size":1}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
