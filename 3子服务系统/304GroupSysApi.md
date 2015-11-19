@@ -62,7 +62,7 @@ GET http://group.service.9h.com/v1/sections/{section_id}/topcis?isTop=true
 
 #### 获得某个版块的所有主贴列表(非置顶，含精华，含附件，获赞数，回帖数)
 
-GET http://group.service.9h.com/sections/{section_id}/topcis
+GET http://group.service.9h.com/v1/sections/{section_id}/topcis
 
 @param sectionId @PathVariable("section_id") 板块id
 
@@ -109,7 +109,7 @@ GET http://group.service.9h.com/sections/{section_id}/topcis
 
 #### 获得某个主帖的回帖列表
 
-GET http://group.service.9h.com/topics/{topic_id}/replys
+GET http://group.service.9h.com/v1/topics/{topic_id}/replys
 
 @param topicId @PathVariable("topic_id") 主贴id
 
@@ -149,11 +149,11 @@ GET http://group.service.9h.com/topics/{topic_id}/replys
 
 #### 跟帖某个主贴
 
-POST http://group.service.9h.com/topics/{topic_id}/replys
+POST http://group.service.9h.com/v1/topics/{topic_id}/replys
 
 #### 获得某个帖子的某个回帖的所有评论
 
-GET http://group.service.9h.com/topics/{topic_id}/replys/{reply_id}/comments
+GET http://group.service.9h.com/v1/topics/{topic_id}/replys/{reply_id}/comments
 
 @param replyId @PathVariable("reply_id")  回复id
 
@@ -192,27 +192,27 @@ GET http://group.service.9h.com/topics/{topic_id}/replys/{reply_id}/comments
 
 #### 评论某个回帖
 
-POST http://group.service.9h.com/topics/{topic_id}/replys/{reply_id}/comments
+POST http://group.service.9h.com/v1/topics/{topic_id}/replys/{reply_id}/comments
 
 #### 赞主贴
 
-POST http://group.service.9h.com/topics/{topic_id}/praisies
+POST http://group.service.9h.com/v1/topics/{topic_id}/praisies
 
 #### 取消赞主贴
 
-DELETE http://group.service.9h.com/topics/{topic_id}/praises/{praise_id}
+DELETE http://group.service.9h.com/v1/topics/{topic_id}/praises/{praise_id}
 
 #### 分享主贴
 
-POST http://group.service.9h.com/topics/{topic_id}/shares
+POST http://group.service.9h.com/v1/topics/{topic_id}/shares
 
 #### 举报主贴
 
-POST http://group.service.9h.com/topics/{topic_id}/reports
+POST http://group.service.9h.com/v1/topics/{topic_id}/reports
 
 #### 举报跟帖
 
-POST http://group.service.9h.com/topics/{topic_id}/replys/{reply_id}/reports
+POST http://group.service.9h.com/v1/topics/{topic_id}/replys/{reply_id}/reports
 
 
 ---
