@@ -356,10 +356,35 @@ POST http://group.service.9h.com/v1/topics/{topic_id}/shares
 
 POST http://group.service.9h.com/v1/topics/{topic_id}/reports
 
+@param topicId @PathVariable("topic_id") 主贴id
+
+@param report {reportUserId:"xxxxxx",reason:"xxxxxx"}
+
+返回json: 
+
+```
+{
+    "oper_code": "1",
+    "data": null  
+}
+```
+
 #### 举报跟帖
 
 POST http://group.service.9h.com/v1/topics/{topic_id}/replys/{reply_id}/reports
 
+@param replyId @PathVariable("reply_id") 跟帖id
+
+@param report  report {reportUserId:"xxxxxx",reason:"xxxxxx"}
+
+返回json: 
+
+```
+{
+    "oper_code": "1",
+    "data": null  
+}
+```
 
 ---
 
