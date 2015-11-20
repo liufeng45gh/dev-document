@@ -316,7 +316,7 @@ DELETE http://group.service.9h.com/v1/topics/{topic_id}/praises
 
 #### 赞跟贴
 
-POST http://group.service.9h.com/v1/topics/replys/{reply_id}/praisies
+POST http://group.service.9h.com/v1/topics/{topic_id}/replys/{reply_id}/praisies
 
 @param replyId  @PathVariable(value = "reply_id") 跟帖id
 
@@ -333,7 +333,7 @@ POST http://group.service.9h.com/v1/topics/replys/{reply_id}/praisies
 
 #### 取消赞跟贴
 
-DELETE http://group.service.9h.com/v1/topics/replys/{reply_id}/praisies
+DELETE http://group.service.9h.com/v1/topics/{topic_id}/replys/{reply_id}/praisies
 
 @param replyId  @PathVariable(value = "reply_id") 跟帖id
 
