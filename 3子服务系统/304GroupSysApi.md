@@ -10,20 +10,26 @@ GET http://group.service.9h.com/v1/sections
 ```
 {
     "oper_code": "1",
-    "data": [
-            {
-                "sectionId": "1", ->版块id
-                "title": "中超联赛", -> 版块名称
-                "logo": "", -> 版块的缩略图,为俱乐部队徽
-                "clubId": "", -> 关联俱乐部id，中超联赛的版块不关联clubId
-                "bgImage": "", ->背景图片
-                "isHidden":"", ->是否显示
-                "topics": 3456, -> 发帖数
-                "bgImage": "", ->背景图
-            },
-            {},
-            {}
-        ]
+    "data":{
+                hasNext: true,
+                dataList: [
+                                {
+                                    "sectionId": "1", ->版块id
+                                    "title": "中超联赛", -> 版块名称
+                                    "logo": "", -> 版块的缩略图,为俱乐部队徽
+                                    "clubId": "", -> 关联俱乐部id，中超联赛的版块不关联clubId
+                                    "bgImage": "", ->背景图片
+                                    "isHidden":"", ->是否显示
+                                    "topics": 3456, -> 发帖数
+                                    "bgImage": "", ->背景图
+                                    "timestamp": "",->时间戳
+                                },
+                                {},
+                                {}
+                            ]
+
+            }
+     
 }
 ```
 
@@ -57,7 +63,7 @@ GET http://group.service.9h.com/v1/sections/{section_id}/topcis?isTop=true
 
 #### 获得某个版块的所有主贴列表(非置顶，含精华，含附件，获赞数，回帖数)
 
-GET http://group.service.9h.com/sections/{section_id}/topcis
+GET http://group.service.9h.com/v1/sections/{section_id}/topcis
 
 @param sectionId @PathVariable("section_id") 板块id
 
@@ -78,28 +84,62 @@ GET http://group.service.9h.com/sections/{section_id}/topcis
 ```
 {
     "oper_code": "1",
-    "data": [
-            {
-                "topicId": "1", ->帖子id
-                "sectionId": "->版块id
-                "authorId": "", ->作者id
-                "title": "", -> 帖子标题
-                "content": "", -> 帖子内容
-                "isBest": "", -> 精华贴
-                "isTop": "", ->置顶贴
-                "replys":"", ->回复条数
-                "praisies": 3456, -> 赞
-                "isDeleted": "", ->是否删除
-            },
-            {},
-            {}
-        ]
+    "data": {
+                hasNext: true,
+                dataList: [
+                                {
+                                    "topicId": "1", ->帖子id
+                                    "sectionId": "->版块id
+                                    "authorId": "", ->作者id
+                                    "title": "", -> 帖子标题
+                                    "content": "", -> 帖子内容
+                                    "isBest": "", -> 精华贴
+                                    "isTop": "", ->置顶贴
+                                    "replys":"", ->回复条数
+                                    "praisies": 3456, -> 赞
+                                    "isDeleted": "", ->是否删除
+                                    "timestamp": "",->时间戳
+                                },
+                                {},
+                                {}
+                            ]
+            }
+
+    
 }
 ```
 
+####创建主贴
+
+POST http://group.service.9h.com/v1/sections/{section_id}/topics
+
+@param sectionId  @PathVariable("section_id") 板块id
+
+@param topic {authorId:1,title:"xxxxxxx",content:"xxxxxxxxxxx"}
+
+返回json:
+
+```
+{
+    "oper_code": "1",
+    "data": {
+                "sectionId": "1", ->版块id
+                "title": "中超联赛", -> 版块名称
+                "logo": "", -> 版块的缩略图,为俱乐部队徽
+                "clubId": "", -> 关联俱乐部id，中超联赛的版块不关联clubId
+                "bgImage": "", ->背景图片
+                "isHidden":"", ->是否显示
+                "topics": 3456, -> 发帖数
+                "bgImage": "", ->背景图
+            }
+}
+```
+
+
+
 #### 获得某个主帖的回帖列表
 
-GET http://group.service.9h.com/topics/{topic_id}/replys
+GET http://group.service.9h.com/v1/topics/{topic_id}/replys
 
 @param topicId @PathVariable("topic_id") 主贴id
 
@@ -116,29 +156,59 @@ GET http://group.service.9h.com/topics/{topic_id}/replys
 ```
 {
     "oper_code": "1",
-    "data": [
-            {
-            	"replyId": "1", ->回复id
+    "data": {
+                hasNext: true,
+                dataList： [
+                                {
+                                    "replyId": "1", ->回复id
+                                    "topicId": "1", ->帖子id
+                                    "authorId": "", ->回复人id
+                                    "content": "", -> 内容
+                                    "userAtTag": "", -> @的用户 
+                                    "comments": "", ->评论数
+                                    "isDeleted": "", ->是否删除
+                                    "timestamp": "",->时间戳
+                                },
+                                {},
+                                {}
+                            ]
+            }
+
+    
+}
+```
+
+
+#### 跟帖某个主贴
+
+POST http://group.service.9h.com/v1/topics/{topic_id}/replys
+
+@param topicId  @PathVariable("topic_id") 主贴id
+
+@param reply  {authorId:"xxxx",content:"xxxxxx",userAtTag:"xxxxxx"}
+
+返回json:
+
+```
+{
+    "oper_code": "1",
+    "data": {                               
+                "replyId": "1", ->回复id
                 "topicId": "1", ->帖子id
                 "authorId": "", ->回复人id
                 "content": "", -> 内容
                 "userAtTag": "", -> @的用户 
                 "comments": "", ->评论数
                 "isDeleted": "", ->是否删除
-            },
-            {},
-            {}
-        ]
+                "timestamp": "",->时间戳                                                            
+            }    
 }
 ```
 
-#### 跟帖某个主贴
-
-POST http://group.service.9h.com/topics/{topic_id}/replys
 
 #### 获得某个帖子的某个回帖的所有评论
 
-GET http://group.service.9h.com/topics/{topic_id}/replys/{reply_id}/comments
+GET http://group.service.9h.com/v1/topics/{topic_id}/replys/{reply_id}/comments
 
 @param replyId @PathVariable("reply_id")  回复id
 
@@ -155,45 +225,166 @@ GET http://group.service.9h.com/topics/{topic_id}/replys/{reply_id}/comments
 ```
 {
     "oper_code": "1",
-    "data": [
-            {
-            	"commentId": "1", ->评论id
-                "replyId": "1", ->回复id
-                "content": "", -> 内容
-                "userAtTag": "", -> @的用户 
-                "authorId": "", ->评论人id
-                "isDeleted": "", ->是否删除
-            },
-            {},
-            {}
-        ]
+    "data": {
+                hasNext: true,
+                dataList：[
+                                {
+                                    "commentId": "1", ->评论id
+                                    "replyId": "1", ->回复id
+                                    "content": "", -> 内容
+                                    "userAtTag": "", -> @的用户 
+                                    "authorId": "", ->评论人id
+                                    "isDeleted": "", ->是否删除
+                                    "timestamp": "",->时间戳
+                                },
+                                {},
+                                {}
+                            ]
+            }
+
+    
 }
 ```
 
 #### 评论某个回帖
 
-POST http://group.service.9h.com/topics/{topic_id}/replys/{reply_id}/comments
+POST http://group.service.9h.com/v1/topics/{topic_id}/replys/{reply_id}/comments
+
+@param replyId @PathVariable("reply_id") 回帖id
+
+@param comment {authorId:"xxxxx",comment:"xxxxxxx",userAtTag:"xxxxx"}
+
+@param topicId @PathVariable("topic_id") 主帖id
+
+返回json:
+
+
+```
+{
+    "oper_code": "1",
+    "data": 
+            {
+                "commentId": "1", ->评论id
+                "replyId": "1", ->回复id
+                "content": "", -> 内容
+                "userAtTag": "", -> @的用户 
+                "authorId": "", ->评论人id
+                "isDeleted": "", ->是否删除
+                "timestamp": "",->时间戳
+            }
+
+    
+}
+```
+
 
 #### 赞主贴
 
-POST http://group.service.9h.com/topics/{topic_id}/praisies
+POST http://group.service.9h.com/v1/topics/{topic_id}/praisies
+
+@param topicId  @PathVariable(value = "topic_id") 主贴id
+
+@param praise  {authorId:"xxxxx"}
+
+返回json: 
+
+```
+{
+    "oper_code": "1",
+    "data": null  
+}
+```
 
 #### 取消赞主贴
 
-DELETE http://group.service.9h.com/topics/{topic_id}/praises/{praise_id}
+DELETE http://group.service.9h.com/v1/topics/{topic_id}/praises
+
+@param topicId  @PathVariable(value = "topic_id") 主贴id
+
+@param praise  {authorId:"xxxxx"}
+
+返回json: 
+
+```
+{
+    "oper_code": "1",
+    "data": null  
+}
+```
+
+
+
+#### 赞跟贴
+
+POST http://group.service.9h.com/v1/topics/{topic_id}/replys/{reply_id}/praisies
+
+@param replyId  @PathVariable(value = "reply_id") 跟帖id
+
+@param praise  {authorId:"xxxxx"}
+
+返回json: 
+
+```
+{
+    "oper_code": "1",
+    "data": null  
+}
+```
+
+#### 取消赞跟贴
+
+DELETE http://group.service.9h.com/v1/topics/{topic_id}/replys/{reply_id}/praisies
+
+@param replyId  @PathVariable(value = "reply_id") 跟帖id
+
+@param praise  {authorId:"xxxxx"}
+
+返回json: 
+
+```
+{
+    "oper_code": "1",
+    "data": null  
+}
+```
 
 #### 分享主贴
 
-POST http://group.service.9h.com/topics/{topic_id}/shares
+POST http://group.service.9h.com/v1/topics/{topic_id}/shares
 
 #### 举报主贴
 
-POST http://group.service.9h.com/topics/{topic_id}/reports
+POST http://group.service.9h.com/v1/topics/{topic_id}/reports
+
+@param topicId @PathVariable("topic_id") 主贴id
+
+@param report {reportUserId:"xxxxxx",reason:"xxxxxx"}
+
+返回json: 
+
+```
+{
+    "oper_code": "1",
+    "data": null  
+}
+```
 
 #### 举报跟帖
 
-POST http://group.service.9h.com/topics/{topic_id}/replys/{reply_id}/reports
+POST http://group.service.9h.com/v1/topics/{topic_id}/replys/{reply_id}/reports
 
+@param replyId @PathVariable("reply_id") 跟帖id
+
+@param report  report {reportUserId:"xxxxxx",reason:"xxxxxx"}
+
+返回json: 
+
+```
+{
+    "oper_code": "1",
+    "data": null  
+}
+```
 
 ---
 
