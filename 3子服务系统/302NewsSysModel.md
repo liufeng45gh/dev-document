@@ -33,6 +33,7 @@ display_order  权重排序,数字越大,权重越高，默认皆为1
 read_count     阅读数
 for_app        管理发布的App类型(101:中超App 201:国安App)  《- 待商议
 ann_type       官方公告类使用(1:官方公告,2:处罚决定,3:通知)默认为1
+is_top         新闻是否置顶(1: 置顶，0 : 未置顶; 默认为 : 0 )
 relative_tag   相关跳转标签(俱乐部,球员,比赛,联赛...)
 created_at     创建时间
 updated_at     更新时间

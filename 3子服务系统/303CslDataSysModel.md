@@ -164,19 +164,20 @@ updated_at    修改时间
 Table data_league_rank_club
 
 id
-league_id  联赛ID
-club_id    俱乐部ID
-round      场次
-wins       胜场
-ties       平场
-loses      负场
-goals      进球
-goals_a    失球
-goals_d    净胜球
-points     积分
-year       联赛年份 (支持不带-的当年和带-的跨年两种格式 注:这里考虑到url的/冲突,避免用/做分隔符)
-created_at 创建时间
-updated_at 修改时间
+league_id       联赛ID
+club_id         俱乐部ID
+ranking_status  排名状态(1:下降,2:保持,3:上升)
+round           场次
+wins            胜场
+ties            平场
+loses           负场
+goals           进球
+goals_a         失球
+goals_d         净胜球
+points          积分
+year            联赛年份 (支持不带-的当年和带-的跨年两种格式 注:这里考虑到url的/冲突,避免用/做分隔符)
+created_at      创建时间
+updated_at      修改时间
 ```
 
 ####3.4.1.11.联赛主场积分榜
@@ -184,19 +185,20 @@ updated_at 修改时间
 ```SQL
 Table data_league_rank_club_home
 id
-league_id  联赛ID
-club_id    俱乐部ID
-round      场次
-wins       胜场
-ties       平场
-loses      负场
-goals      进球
-goals_a    失球
-goals_d    净胜球
-points     主场积分
-year       联赛年份 (支持不带-的当年和带-的跨年两种格式 注:这里考虑到url的/冲突,避免用/做分隔符)
-created_at 创建时间
-updated_at 修改时间
+league_id       联赛ID
+club_id         俱乐部ID
+ranking_status  排名状态(1:下降,2:保持,3:上升)
+round           场次
+wins            胜场
+ties            平场
+loses           负场
+goals           进球
+goals_a         失球
+goals_d         净胜球
+points          主场积分
+year            联赛年份 (支持不带-的当年和带-的跨年两种格式 注:这里考虑到url的/冲突,避免用/做分隔符)
+created_at      创建时间
+updated_at      修改时间
 ```
 
 ####3.4.1.12.联赛客场积分榜
@@ -204,19 +206,20 @@ updated_at 修改时间
 ```SQL
 Table data_league_rank_club_guest
 id
-league_id  联赛ID
-club_id    俱乐部ID
-round      场次
-wins       胜场
-ties       平场
-loses      负场
-goals      进球
-goals_a    失球
-goals_d    净胜球
-points     客场积分
-year       联赛年份 (支持不带-的当年和带-的跨年两种格式 注:这里考虑到url的/冲突,避免用/做分隔符)
-created_at 创建时间
-updated_at 修改时间
+league_id       联赛ID
+club_id         俱乐部ID
+ranking_status  排名状态(1:下降,2:保持,3:上升;默认为:2)
+round           场次
+wins            胜场
+ties            平场
+loses           负场
+goals           进球
+goals_a         失球
+goals_d         净胜球
+points          客场积分
+year            联赛年份 (支持不带-的当年和带-的跨年两种格式 注:这里考虑到url的/冲突,避免用/做分隔符)
+created_at      创建时间
+updated_at      修改时间
 ```
 
 #### 3.4.1.13. 联赛射手榜

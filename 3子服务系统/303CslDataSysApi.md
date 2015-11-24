@@ -39,14 +39,21 @@
 |请求方式| DELETE : 删除多个球员|
 |请求参数| ids(如:4,5,6,7)  必填|
 
-#### 3.4.2.3  获取某个俱乐部的详细资料
+####  3.4.2.3  获取某个球员近五年的资料
+
+|接口地址|http://data.service.9h.com/players/player-history/{playerId}|
+| -- |  :-- |
+|请求方式| GET |
+| 请求参数| playerId：球员Id |
+
+#### 3.4.2.4  获取某个俱乐部的详细资料
 
 | 接口地址 |http://data.service.9h.com/clubs/{club_id}  |
 | --  | :-- |
 | 请求方式 | GET、PUT、DELETE |
 |请求参数|club_id：俱乐部的id，必填|
 
-####  3.4.2.4  修改某个俱乐部的详细资料
+####  3.4.2.5  修改某个俱乐部的详细资料
 
 | 接口地址 | http://data.service.9h.com/clubs |
 | --  | :-- |
@@ -69,7 +76,7 @@
 | 接口地址 |http://data.service.9h.com/clubs/{clubId}/players |
 | --  | :-- |
 | 请求方式 | GET : 获取球员<br />POST : 给某俱乐部添加球员|
-| 请求参数|club_id：俱乐部的id,必填<br >served=true : 获取某个俱乐部下现役的所有球员<br/>served=false：获取某个俱乐部下服役过的球员(不包括在役球员)<br/>served : 不填写将返回所有的球员|
+| 请求参数|club_id：俱乐部的id,必填<br >served=true : 获取某个俱乐部下现役的所有球员<br/>forServe=true：判断是否为后台调用(可选)<br/>leagueType：1:踢正赛(比如中超)，2:踢正赛,非正赛(比如中超预备队) 3:踢非正赛(可选)默认为 1<br/>year:球员效力于俱乐部的年份(可选)|
 
 #### 3.5.2.7  修改某个俱乐部与球员的关联关系
 
