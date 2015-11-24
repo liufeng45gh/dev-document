@@ -13,6 +13,7 @@ local_url     资源的本地路径
 cloud_url     资源的云平台路径
 content       文字内容(text类型使用)
 content _url  文字内容来源地址
+label         广告标签(如 : 广告，赞助等)
 memo          备注(1,2,3通用)
 created_at    资源创建时间
 updated_at    资源修改时间
