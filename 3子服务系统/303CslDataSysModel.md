@@ -1,5 +1,36 @@
 ### 3.4.1. 数据模型
 
+#### 第二版新增数据模型
+
+#### 1. 比赛统计
+```SQL
+Table data_match_stat
+id 
+to_shoot       射门总数 
+in_target      射正球门
+miss_goals     射门偏出
+hit_woodwork   击中门框
+spot_kick      点球次数
+pass_times     传球次数
+through_pass   直塞球
+offside        越位
+steal          抢断
+free_kick      任意球
+corner         角球
+out-of-bounds  界外球
+pass_compl     传球成功率
+pass_middle    传中成功率
+steal_rate     抢断成功率
+possession     控球率
+fouls          犯规
+yellow_cards   黄牌
+red_cards      红牌
+injury         受伤
+
+注：数据保存格式: 主场球队/客场球队 如 2/3  
+```
+
+* * * 
 #### 3.4.1.1. 球员资料
 
 ```SQL
