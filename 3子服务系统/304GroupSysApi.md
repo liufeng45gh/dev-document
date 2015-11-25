@@ -1,6 +1,56 @@
 
 ## 3.5.2. 数据服务接口
 
+正式地址:   
+Swagger:  
+测试地址: http://123.59.84.71:8082/group/v1/  
+Swagger: http://123.59.84.71:8082/group/swagger/index.html  
+
+### 3.5.3.1. 圈子的所有服务接口清单
+
+ 方法 | 接口 | 用途 | 返回 | 是否走网关 
+ :-- | :--  | :-- | :-- | :--
+ GET | /sections | 获取所有的圈子版块 | [] |
+     | /sections?onlined=true | 获取所有的已上线圈子版块 | [] | 是
+ POST| /sections | 新增一个圈子 | {} |
+ PUT | /sections/{section_id} | 修改一个圈子资料(含下线)  | {} |
+ DELETE| /sections/{section_id} | 删除一个圈子| |
+ GET | /sections/{section_id} | 获取某个圈子的详细资料 | section | 是
+     |  |  |  |  
+ GET | /sections/{section_id}/topics | 获取某个圈子的所有帖子信息(分页) | topics |
+ GET | /sections/{section_id}/topics?isTop=true | 获取某个圈子的置顶帖信息 | topics | 是
+ GET | /sections/{section_id}/topics?method=init | 第一次获取某个圈子的最新帖子，默认20条| topics|是
+ GET | /sections/{section_id}/topics?method=refresh&timestamp={timestamp}(分页)|下拉刷新获取新帖 | topics |是
+ GET | /sections/{section_id}/topics?method=history&timestamp={timestamp}(分页)|上拉加载获取旧帖 | topics |是 
+ POST| /sections/{section_id}/topics | 某个圈子内发表新帖 | topic | 是
+     |  |  |  |
+ GET | /topics/{topic_id} | 获取某个帖子的详情 | topic |是
+ PUT | /topics/{topic_id} | 修改某个帖子 | topic | 是
+ DELETE|/topics/{topic_id}| 删除某个帖子 |  | 是
+ GET | /topics/{topic_id}/praisies?user_id={user_id}|检查某人是否已赞某个主贴| {} | 是
+ POST| /topics/{topic_id}/praisies| 赞某个帖子 |  | 是 
+ DELETE|/topics/{topic_id}/praisies/{praise_id}| 取消赞某个帖子 |  | 是 
+ POST|  /topics/{topic_id}/shares| 分享某个帖子 |  | 是
+ POST| /topics/{topic_id}/reports | 对某个帖子进行举报| report |是
+ GET | /topics/{topic_id}/replys| 获取某个帖子的回帖(分页)| replys |是    
+ POST| /topics/{topic_id}/replys | 对某个帖子进行回帖| reply |是
+ PUT | /topics/{topic_id}/replys/{reply_id}| 修改某个帖子| reply |是
+ DELETE| /topics/{topic_id}/replys/{reply_id}| 删除某个回帖 |  | 是
+  | | | | 
+ GET | /topics/{topic_}/replys/{reply_id}/comments|获取某个回帖的评论(分页，默认10)| [] |是
+ GET | /topics/{topic_}/replys/{reply_id}/comments?getAll=true|获取某个回帖的所有评论| [] |是
+ POST| /topics/{topic_}/replys/{reply_id}/comments|对某个回帖进行评论| {} |是
+  | | | | 
+ GET | /topics-praisies | 获取所有获赞记录 | |
+ GET | /topics-shares   | 获取所有分享记录 | |
+ GET | /topics-reports  | 获取所有举报记录 | |
+ GET | /replys-reports  | 获取所有回帖的举报记录| |
+  | | | |
+ GET | /sections/{section_id}/admins | 查询某个论坛的坛主 | [] | 
+ POST| /
+ 
+### 3.5.3.2. 各接口的样例数据及字段解释
+
 #### 获得圈子所有的版块信息
 
 GET http://group.service.9h.com/v1/sections
@@ -8,29 +58,25 @@ GET http://group.service.9h.com/v1/sections
 返回格式:
 
 ```
-{
-    "oper_code": "1",
-    "data":{
-                hasNext: true,
-                dataList: [
-                                {
-                                    "sectionId": "1", ->版块id
-                                    "title": "中超联赛", -> 版块名称
-                                    "logo": "", -> 版块的缩略图,为俱乐部队徽
-                                    "clubId": "", -> 关联俱乐部id，中超联赛的版块不关联clubId
-                                    "bgImage": "", ->背景图片
-                                    "isHidden":"", ->是否显示
-                                    "topics": 3456, -> 发帖数
-                                    "bgImage": "", ->背景图
-                                    "timestamp": "",->时间戳
-                                },
-                                {},
-                                {}
-                            ]
+HTTP Stauts Code: 200
 
-            }
-     
-}
+BODY:
+[
+    {
+        "sectionId": "1", ->版块id
+        "title": "中超联赛", -> 版块名称
+        "logo": "", -> 版块的缩略图,为俱乐部队徽
+        "clubId": "", -> 关联俱乐部id，中超联赛的版块不关联clubId
+        "bgImage": "", ->背景图片
+        "isHidden":"", ->是否显示
+        "topics": 3456, -> 发帖数
+        "bgImage": "", ->背景图
+        "timestamp": "",->时间戳
+    },
+    {},
+    {}
+]
+
 ```
 
 #### 获得某个圈子的版块信息
@@ -43,8 +89,7 @@ GET http://group.service.9h.com/v1/sections/{section_id}
 
 ```
 {
-    "oper_code": "1",
-    "data": {
+
                 "sectionId": "1", ->版块id
                 "title": "中超联赛", -> 版块名称
                 "logo": "", -> 版块的缩略图,为俱乐部队徽
@@ -53,7 +98,7 @@ GET http://group.service.9h.com/v1/sections/{section_id}
                 "isHidden":"", ->是否显示
                 "topics": 3456, -> 发帖数
                 "bgImage": "", ->背景图
-            }
+
 }
 ```
 
