@@ -12,9 +12,20 @@
 #### 1.2. API请求的默认参数:  
 
 * page-num(默认值1，可重载)
-* page-size(默认值20，可重载) 
+* page-(默认值20，可重载) 
 
-注: [子服务系统]使用Header扩展来使用分页信息，客户端依然使用page-num,page-size。
+注: [子服务系统]使用Header扩展来使用分页信息，客户端依然使用page-num,page-row。
+
+请求：Header扩展
+* X-Page-Num   页数
+* X-Page-Row   每页行数 
+
+返回: Header扩展
+* X-Total-Page    总共页数
+* X-Total-Row     总共记录数
+* X-Page-Row      每页记录数
+* X-Page-Num      当前页数
+* X-Page-Hasnext  是否有下一页
 
 #### 1.3. API网关返回结果的JSON约定包含:
 
@@ -26,7 +37,9 @@
 }
 
 ```
+
 注: [子服务系统]使用Header扩展来使用err_code,API网关负责转换该信息至body体
+* X-Err-Code  具体的错误信息码
 
 #### 1.3.1. err_code完整编码表
 
