@@ -29,3 +29,15 @@
 |--| :--|
 |请求方式| GET|
 |请求参数|filters：参数名称集合(如：pageNo,pageSize,name,birth,country,englishName)<br />value：参数值集合(如:1,25,贾秀全,1963-03-23,中国,Jia Xiuquan) |
+
+#### 6.获取所有裁判
+|接口地址|http://news.service.9h.com/v1/data/judges|
+|--| :--|
+|请求方式| GET|
+|请求参数|filters：参数名称集合(如：pageNo,pageSize,name,birth,nationality,region,level)<br />value：参数值集合(如:1,25,王津,1970-03-01,中国,天津,国家级) |
+
+#### 7.获取某个俱乐部某年的所有球员
+|接口地址|http://news.service.9h.com/v1/data/clubs/{clubId}/{year}/players|
+|--| :--|
+|请求方式| GET|
+|请求参数|filters：参数名称集合(如：pageNo,pageSize,name,birth,country,nativePlace,position,playerNumber,leagueType)<br />value：参数值集合(如:1,25,赵石,1993-03-16,中国,北京,门将,1,1) |
