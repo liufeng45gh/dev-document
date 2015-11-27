@@ -41,3 +41,21 @@
 |--| :--|
 |请求方式| GET|
 |请求参数|filters：参数名称集合(如：pageNo,pageSize,name,birth,country,nativePlace,position,playerNumber,leagueType)<br />value：参数值集合(如:1,25,赵石,1993-03-16,中国,北京,门将,1,1) |
+
+#### 8.某个联赛在某年的助攻榜
+|接口地址|http://news.service.9h.com/v1/data/leagues/{leagueId}/{year}/rank-assistant|
+|--| :--|
+|请求方式| GET|
+|请求参数|filters：参数名称集合(如：pageNo,pageSize,name,clubId,assistants)<br />value：参数值集合(如:1,25,高拉特,3,10) |
+
+#### 9.某个联赛在某年的射手榜
+|接口地址|http://news.service.9h.com/v1/data/leagues/{league_id}/{year}/rank-goal |
+|--| :--|
+|请求方式| GET|
+|请求参数|filters：参数名称集合(如：pageNo,pageSize,playerName,clubId,goals)<br />value：参数值集合(如:1,25,阿洛伊西奥,4,22) |
+
+#### 10.获取所有比赛
+|接口地址|http://news.service.9h.com/v1/data/leagues/matches |
+|--| :--|
+|请求方式| GET|
+|请求参数|filters：参数名称集合(如：pageNo,pageSize,leagueId,round,year,matchStatus,homeClubId,guestClubId,startAt,endAt,stadium)<br />value：参数值集合(如:1,25,1,2,2016,3,10,8,2016-10-14,2016-10-15,经开) |
