@@ -22,6 +22,24 @@
 
 ### 3.4.2. 数据服务接口
 
+#### 第二版新增数据接口
+
+
+#### 1.获取某个联/杯赛在某年某场比赛的分析
+
+|接口地址|http://data.service.9h.com/leagues/{league_id}/{year}/{match_id}/matches-analysis|
+|--| :--|
+|请求方式| GET|
+|请求参数|league_id : 联赛Id,必填<br/>year : 联赛年份,必填<br />match_id：比赛Id,必填<br /> homeClubId : 主队Id,必填<br />guestClubId : 客队Id,必填|
+
+#### 2. 获取某场比赛的统计数据
+|接口地址|http://data.service.9h.com/leagues/{league_id}/{year}/{match_id}/matches-stat|
+|--|:--|
+|请求方式| GET|
+|请求参数|league_id : 联赛Id,必填<br/>year : 联赛年份,必填<br />match_id：比赛Id,必填|
+
+* * * 
+
 #### 3.4.2.1  获取某位球员的详细资料
 
 | 接口地址 |http://data.service.9h.com/players/{player_id}  |

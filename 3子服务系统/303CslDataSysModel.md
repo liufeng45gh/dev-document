@@ -6,6 +6,7 @@
 ```SQL
 Table data_match_stat
 id 
+match_id       赛事ID
 to_shoot       射门总数 
 in_target      射正球门
 miss_goals     射门偏出
@@ -28,6 +29,19 @@ red_cards      红牌
 injury         受伤
 
 注：数据保存格式: 主场球队/客场球队 如 2/3  
+```
+#### 2. 赛事事件
+```SQL
+Table data_match_event
+id
+match_id      赛事ID
+event_type    事件类型(0:比赛开始,1:进球,2:助攻,3:红牌,4:黄牌,5:换人,6:比赛结束)
+event_data    进球数据保存--> {"goalsType":"1","playerName":"张稀哲"} goalsType(1:进球,2:点球,3:乌龙)
+              助攻/红牌/黄牌数据保存--> {"playerName":"张稀哲"}
+              换人数据保存--> {"playerUp":"何超","playerDown":"阎峰"}
+event_club    产生此事件的球队(1:主场球队,2:客场球队)
+event_at      事件发生时间
+created_at    数据记录创建时间
 ```
 
 * * * 
