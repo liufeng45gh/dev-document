@@ -118,7 +118,7 @@ GET http://group.service.9h.com/v1/sections/{section_id}/topcis
 
 @param isTop @RequestParam(value = "isTop",required=false,defaultValue="false") 是否置顶贴
 
-@param page @RequestParam(value = "page-num",required=false,defaultValue="1") 第几页
+@param page @RequestHeader(value = "X-Page-Num",required=false,defaultValue="1")  第几页
 
 @param count @RequestParam(value = "page-size",required=false,defaultValue="20")  每页条数
 
