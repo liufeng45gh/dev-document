@@ -3,23 +3,56 @@
     * pageNo：对查询数据的页数请求，可选，默认为1
     * pageSize：对每页数据的行数请求，可选，默认为20
 * 接口返回数据中的分页信息：
+    *  totalItemNumber：查询出来的总数
     *  totalPageNumber：根据数据页数计算出来的页数
-    *  hasNext：是否有下一页
-    *  hasPrev：是否有上一页
-    *  prev：上一页页码
-    *  pageNo：当前页码
+    *  hasNext： 是否有下一页
+    *  hasPrev： 是否有上一页
+    *  prev：    上一页页码
+    *  pageNo：  当前页码
     *  pageSize：每页请求数量
 *  请求参数（以下参数接口中若有出现必填）
-    *  player_id：测试值为9~261
-    *  club_id：测试值为2~21
-    *  judge_id：测试值为1~2
-    *  coach_id：测试值为1~14
-    *  league_id：测试值为：1
-    *  round：测试值：1~2
-    *  year：测试值：2015
+    *  player_id：球员ID 
+    *  club_id：  俱乐部ID 
+    *  judge_id： 裁判ID 
+    *  coach_id： 教练ID 
+    *  league_id：联赛ID (可用联赛英文简称代替，如：csl)
+    *  round：    比赛轮次
+    *  year：     联赛年份
 注： 请求参数 league_id  可用 league_name 代替,league_name 的值为 :  csl(中超联赛), cl(中甲联赛), csl-p(中超预备队联赛), acl(亚冠联赛) 
 
 ### 3.4.2. 数据服务接口
+
+#### 第二版新增数据接口
+
+
+#### 1.获取某个联/杯赛在某年某场比赛的分析
+
+|接口地址|http://data.service.9h.com/leagues/{league_id}/{year}/matches/{match_id}/analysis|
+|--| :--|
+|请求方式| GET|
+|请求参数|league_id : 联赛Id,必填<br/>year : 联赛年份,必填<br />match_id：比赛Id,必填<br /> homeClubId : 主队Id,必填<br />guestClubId : 客队Id,必填|
+|例|http://123.59.84.71/v1/data/leagues/cls/2015/matches/315/analysis?homeClubId=15&guestClubId=10|
+
+#### 2. 获取某场比赛的统计数据
+|接口地址|http://data.service.9h.com/leagues/{league_id}/{year}/matches/{match_id}/stat|
+|--|:--|
+|请求方式| GET|
+|请求参数|league_id : 联赛Id,必填<br/>year : 联赛年份,必填<br />match_id：比赛Id,必填|
+
+#### 3. 获取某场比赛的阵容
+|接口地址|http://data.service.9h.com/leagues/{league_id}/{year}/matches/{match_id}/line|
+|--|:--|
+|请求方式| GET|
+|请求参数|league_id : 联赛Id,必填<br/>year : 联赛年份,必填<br />match_id：比赛Id,必填<br /> homeClubId : 主队Id,必填<br />guestClubId : 客队Id,必填|
+
+#### 4. 获取某场比赛的事件
+|接口地址|http://data.service.9h.com/leagues/{league_id}/{year}/matches/{match_id}/event|
+|--|:--|
+|请求方式| GET|
+|请求参数|league_id : 联赛Id,必填<br/>year : 联赛年份,必填<br />match_id：比赛Id,必填<br />timestamp：事件最后发生时间,可选|
+|例如|http://123.59.84.71/v1/data/leagues/cls/2015/matches/315/event?timestamp=1458042420000|
+
+* * * 
 
 #### 3.4.2.1  获取某位球员的详细资料
 
@@ -38,14 +71,21 @@
 |请求方式| DELETE : 删除多个球员|
 |请求参数| ids(如:4,5,6,7)  必填|
 
-#### 3.4.2.3  获取某个俱乐部的详细资料
+####  3.4.2.3  获取某个球员近五年的资料
+
+|接口地址|http://data.service.9h.com/players/player-history/{playerId}|
+| -- |  :-- |
+|请求方式| GET |
+| 请求参数| playerId：球员Id |
+
+#### 3.4.2.4  获取某个俱乐部的详细资料
 
 | 接口地址 |http://data.service.9h.com/clubs/{club_id}  |
 | --  | :-- |
 | 请求方式 | GET、PUT、DELETE |
 |请求参数|club_id：俱乐部的id，必填|
 
-####  3.4.2.4  修改某个俱乐部的详细资料
+####  3.4.2.5  修改某个俱乐部的详细资料
 
 | 接口地址 | http://data.service.9h.com/clubs |
 | --  | :-- |
@@ -68,7 +108,7 @@
 | 接口地址 |http://data.service.9h.com/clubs/{clubId}/players |
 | --  | :-- |
 | 请求方式 | GET : 获取球员<br />POST : 给某俱乐部添加球员|
-| 请求参数|club_id：俱乐部的id,必填<br >served=true : 获取某个俱乐部下现役的所有球员<br/>served=false：获取某个俱乐部下服役过的球员(不包括在役球员)<br/>served : 不填写将返回所有的球员|
+| 请求参数|club_id：俱乐部的id,必填<br >served=true : 获取某个俱乐部下现役的所有球员<br/>forServe=true：判断是否为后台调用(可选)<br/>leagueType：1:踢正赛(比如中超)，2:踢正赛,非正赛(比如中超预备队) 3:踢非正赛(可选)默认为 1<br/>year:球员效力于俱乐部的年份(可选)|
 
 #### 3.5.2.7  修改某个俱乐部与球员的关联关系
 
