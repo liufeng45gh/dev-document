@@ -3,10 +3,11 @@
 #### 第二版新增数据模型
 
 #### 1. 比赛统计
-```SQL
 Table data_match_stat
 id 
-match_id       赛事ID
+match_id       赛事ID FK ->data_match.id
+club_id        球队ID FK -> data_club.id
+club_type      球队类型(1:主队,2:客队)
 to_shoot       射门总数 
 in_target      射正球门
 miss_goals     射门偏出
@@ -27,9 +28,11 @@ fouls          犯规
 yellow_cards   黄牌
 red_cards      红牌
 injury         受伤
-
-注：数据保存格式: 主场球队/客场球队 如 2/3  
+year           年份
+created_at     
+updated_at
 ```
+
 #### 2. 赛事事件
 ```SQL
 Table data_match_event
