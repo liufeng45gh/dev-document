@@ -10,7 +10,8 @@
 |接口地址|http://news.service.9h.com/v1/news/publish-news/top-news/{news_publish_id}  |
 |--| :--|
 |请求方式| PUT|
-|请求参数|news_publish_id：新闻Id，必填;<br /> is_top：新闻是否置顶，1: 置顶，0: 未置顶;可选, 默认为: 0 |
+|请求参数|news_publish_id：新闻Id，必填|
+|请求体|如 : {"isTop":"1"}<br /> isTop：新闻是否置顶，1: 置顶，0: 未置顶;可选, 默认为: 0 |
 
 #### 3.获取所有球员的基础资料
 |接口地址|http://news.service.9h.com/v1/data/players|
