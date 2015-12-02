@@ -18,7 +18,7 @@ offside        越位
 steal          抢断
 free_kick      任意球
 corner         角球
-out-of-bounds  界外球
+out_of_bounds  界外球
 pass_compl     传球成功率
 pass_middle    传中成功率
 steal_rate     抢断成功率
@@ -36,12 +36,14 @@ Table data_match_event
 id
 match_id      赛事ID
 event_type    事件类型(0:比赛开始,1:进球,2:助攻,3:红牌,4:黄牌,5:换人,6:比赛结束)
-event_data    进球数据保存--> {"goalsType":"1","playerName":"张稀哲"} goalsType(1:进球,2:点球,3:乌龙)
+event_data    进球数据保存--> {"goalsType":"1","playerName":"张稀哲"} goalsType(1:进球,2:点球,3:乌龙,4:点球未进)
               助攻/红牌/黄牌数据保存--> {"playerName":"张稀哲"}
               换人数据保存--> {"playerUp":"何超","playerDown":"阎峰"}
 event_club    产生此事件的球队(1:主场球队,2:客场球队)
+event_point   事件发生时间点(如: 比赛中的第 45min )
 event_at      事件发生时间
 created_at    数据记录创建时间
+updated_at    数据记录更新时间
 ```
 
 * * * 
