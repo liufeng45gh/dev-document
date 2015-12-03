@@ -67,14 +67,16 @@ updated_at
 ```SQL
 Table data_match_player
 id
-match_line_id       赛事阵容  FK -> data_match_line.id
+match_id            赛事阵容  FK -> data_match.id
 club_id             俱乐部ID  FK -> data_club.id
+club_type           球队类型(1:主队,2:客队)
 player_name         球员姓名
 player_number       球衣号码
 position            队内位置，文字描述(门将/后卫/中场/前锋)
-position_number     位置权重，排序用,数字大在前面 1:门将 2:后卫 3:中场 4:前锋;默认为0
+position_number     位置权重，排序用, 1:门将 2:后卫 3:中场 4:前锋;默认为0
 avatar              球员头像URL
 player_type         球员类型(1:首发球员,2:替补球员;默认为1)
+year                年份
 created_at    
 updated_at
 ```
