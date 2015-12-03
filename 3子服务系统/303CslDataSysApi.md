@@ -43,7 +43,8 @@
 |接口地址|http://data.service.9h.com/leagues/{league_id}/{year}/matches/{match_id}/line|
 |--|:--|
 |请求方式| GET|
-|请求参数|league_id : 联赛Id,必填<br/>year : 联赛年份,必填<br />match_id：比赛Id,必填<br /> homeClubId : 主队Id,必填<br />guestClubId : 客队Id,必填|
+|请求参数|league_id : 联赛Id,必填<br/>year : 联赛年份,必填<br />match_id：比赛Id,必填|
+|例如|http://123.59.84.71/v1/data/leagues/cls/2015/matches/315/line|
 
 #### 4. 获取某场比赛的事件
 |接口地址|http://data.service.9h.com/leagues/{league_id}/{year}/matches/{match_id}/event|
