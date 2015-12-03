@@ -3,6 +3,7 @@
 #### 第二版新增数据模型
 
 #### 1. 比赛统计
+```SQL
 Table data_match_stat
 id 
 match_id       赛事ID FK ->data_match.id
