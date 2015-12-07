@@ -30,7 +30,7 @@ is_top      是否置顶贴
 posted_at   发表时间
 updated_at  修改时间
 replys      获得的回帖数
-praisies    获得的赞数
+praises    获得的赞数
 is_deleted  是否被删除(这里做软删除，1:被删,0:存在，默认皆为0)
 ```
 
