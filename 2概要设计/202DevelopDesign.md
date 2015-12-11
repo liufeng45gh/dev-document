@@ -21,6 +21,8 @@
 * [撰写合格的REST API(中)](http://zhuanlan.zhihu.com/prattle/20034107)  
 * [来自HeroKu的HTTP API 设计指南(中)](http://get.jobdeer.com/343.get)
 
+* [RESTFUL API 安全设计指南(重要)](http://drops.wooyun.org/web/9737) 
+
 #### 3. 免费的SSL证书
 
 * [StartSSL](http://www.startssl.com/)
