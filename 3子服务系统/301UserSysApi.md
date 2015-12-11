@@ -168,31 +168,102 @@ GET https://api-csl.9h-sports.com/v1/user/user-match-stars/{user_id}
 
 
 --------------------------------------------
+#### 用户获取相互关注列表
+GET http://user.service.9h.com/user-friends/{user_id}
 
+返回JSON
+```
+{
+    "desc":null,
+    "oper_code":"1",
+    "data":[
+        {
+            "nickName":"",   --> 昵称
+            "fansCount":"",  --> 粉丝数量
+            "avatar":"",     --> 头像
+            "userId":""
+        },
+        Object{...},
+        Object{...}
+    ],
+    "message":null
+}
+```
+例：http://123.59.84.71/v1/user/user-friends/1
 
-#### 用户获取自己的关注他人列表(2.0未实现)
+#### 用户获取自己的关注他人列表
 
 GET http://user.service.9h.com/user-follows/{user_id}
 
-#### 用户关注其他用户(2.0未实现)
+返回JSON
+```
+{
+    "desc":null,
+    "oper_code":"1",
+    "data":[
+        {
+            "nickName":"",   --> 昵称
+            "fansCount":"",  --> 粉丝数量
+            "avatar":"",     --> 头像
+            "userId":"",
+            "status":""      --> 关注关系(1:用户关注，2:互相关注)
+        },
+        Object{...},
+        Object{...}
+    ],
+    "message":null
+}
+```
+例：http://123.59.84.71/v1/user/user-follows/1
+
+#### 用户关注其他用户
 
 POST http://user.service.9h.com/user-follows/{user_id}
 
-#### 用户取消关注其他用户(2.0未实现)
+上送: BODY: {"followUserId":"××"}
+
+返回: {oper_code:1}
+
+#### 用户取消关注其他用户
 
 DELETE http://user.service.9h.com/user-follows/{user_id}/{user_id}
 
-#### 用户获取自己的被关注列表(2.0未实现)
+返回: {oper_code:1,"message":"××××"}
+
+#### 用户获取自己的被关注列表
 
 GET http://user.service.9h.com/user-follow-bys/{user_id}
 
-#### 用户获得一次被关注(2.0未实现)
+返回JSON
+```
+{
+    "desc":null,
+    "oper_code":"1",
+    "data":[
+        {
+            "nickName":"",   --> 昵称
+            "isBlocked":"",  --> 该用户是否屏蔽关注人(1:屏蔽 0:不屏蔽)
+            "fansCount":"",  --> 粉丝数量
+            "avatar":"",     --> 头像
+            "userId":"",
+            "status":""      --> 关注关系(1:用户关注，2:互相关注)
+        },
+        Object{...},
+        Object{...}
+    ],
+    "message":null
+}
+```
+例：http://123.59.84.71/v1/user/user-follow-bys/1
 
-POST http://user.service.9h.com/user-follow-bys/{user_id}
+#### 用户从被关注列表中屏蔽关注自己的用户
 
-#### 用户从被关注列表中屏蔽关注自己的用户(2.0未实现)
+PUT http://user.service.9h.com/user-follow-bys/{user_id}
 
-DELETE http://user.service.9h.com/user-follow-bys/{user_id}/{user_id}
+上送: BODY: {"isBlocked":"0","followUserId":"××"} --> 取消屏蔽<br/>
+上送: BODY: {"isBlocked":"1","followUserId":"××"} --> 屏蔽
+
+返回: {oper_code:1,"message":"××××"}
 
 ----------------------------------------
 
@@ -211,4 +282,3 @@ GET https://api-csl.9h-sports.com/v1/user/get-user-check-ins/{user_id}
 #### 获取用户签到排行
 
 GET https://api-csl.9h-sports.com/v1/user/user-checkin-rank/{user_id}
-
