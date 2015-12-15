@@ -5,11 +5,11 @@
 #### 1. 比赛统计
 ```SQL
 Table data_match_stat
-id 
+id
 match_id       赛事ID FK ->data_match.id
 club_id        球队ID FK -> data_club.id
 club_type      球队类型(1:主队,2:客队)
-to_shoot       射门总数 
+to_shoot       射门总数
 in_target      射正球门
 miss_goals     射门偏出
 hit_woodwork   击中门框
@@ -53,7 +53,7 @@ updated_at    数据记录更新时间
 ####  3. 比赛阵容
 ```SQL
 Table data_match_line
-id 
+id
 match_id         赛事ID   FK -> data_match.id
 home_club_id     主队ID   FK -> data_club.id
 guest_club_id    客队ID   FK -> data_club.id
@@ -77,11 +77,12 @@ position_number     位置权重，排序用, 1:门将 2:后卫 3:中场 4:前�
 avatar              球员头像URL
 player_type         球员类型(1:首发球员,2:替补球员;默认为1)
 year                年份
+coordinates         用于确定球员在阵容图的坐标
 created_at    
 updated_at
 ```
 
-* * * 
+* * *
 #### 3.4.1.1. 球员资料
 
 ```SQL
@@ -427,7 +428,7 @@ player_name         球员姓名
 player_re_club_name 球员所属俱乐部名称
 player_re_club_logo 球员所属俱乐部logo
 player_number       球员号码
-judge_id            最佳裁判  FK -> data_league_judge.id 
+judge_id            最佳裁判  FK -> data_league_judge.id
 judge_name          裁判姓名
 judge_region        裁判地区(直辖市/省级的粒度)
 judge_birth         裁判出生年月
