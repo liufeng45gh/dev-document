@@ -29,6 +29,9 @@ fouls          犯规
 yellow_cards   黄牌
 red_cards      红牌
 injury         受伤
+pauses         停顿次数
+real_match_at  净比赛时间
+running_dis    跑动距离
 year           年份
 created_at     
 updated_at
