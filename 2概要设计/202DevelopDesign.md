@@ -11,7 +11,7 @@
 * [微服务实战（二）：使用API Gateway](http://dockone.io/article/482)
 * [微服务实战（三）：深入微服务架构的进程间通信](http://dockone.io/article/549)
 * [微服务实战（四）：服务发现的可行方案以及实践案例](http://dockone.io/article/771)
-* 微服务实战（五）
+* [微服务实战（五）：微服务的事件驱动数据管理](http://dockone.io/article/936)
 * 微服务实战（六）
 * 微服务实战（七）
 
@@ -56,8 +56,8 @@
 * [Java编码规范]
 * [JavaScript编码规范]
 * [Go编码规范]
-* [CSS编码规范]
-* [Swift编码规范(英文)](https://github.com/raywenderlich/swift-style-guide)
+* [CSS编码规范[中文]](http://zoomzhao.github.io/code-guide/)
+* [Swift编码规范[英文]](https://github.com/raywenderlich/swift-style-guide)
 
 #### 10. 应用架构规范
 
