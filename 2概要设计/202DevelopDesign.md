@@ -7,20 +7,21 @@
 
 #### 1. 微服务架构
 
-<img src="../Pics/microarch01.jpg" alt="微服务简单概要图" width="640" height="360" border="10" />
-
 * [微服务实战（一）：微服务架构的优势与不足](http://dockone.io/article/394)
 * [微服务实战（二）：使用API Gateway](http://dockone.io/article/482)
 * [微服务实战（三）：深入微服务架构的进程间通信](http://dockone.io/article/549)
-* 微服务实战（四）
-* 微服务实战（五）
+* [微服务实战（四）：服务发现的可行方案以及实践案例](http://dockone.io/article/771)
+* [微服务实战（五）：微服务的事件驱动数据管理](http://dockone.io/article/936)
 * 微服务实战（六）
 * 微服务实战（七）
 
 #### 2. API设计规范
 
-* [撰写合格的REST API](http://zhuanlan.zhihu.com/prattle/20034107)  
-* [来自HeroKu的HTTP API 设计指南](http://get.jobdeer.com/343.get)
+* [RESTful API 设计指南(简)](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
+* [撰写合格的REST API(中)](http://zhuanlan.zhihu.com/prattle/20034107)  
+* [来自HeroKu的HTTP API 设计指南(中)](http://get.jobdeer.com/343.get)
+
+* [RESTful API 安全设计指南(重要)](http://drops.wooyun.org/web/9737) 
 
 #### 3. 免费的SSL证书
 
@@ -55,11 +56,20 @@
 * [Java编码规范]
 * [JavaScript编码规范]
 * [Go编码规范]
-* [CSS编码规范]
+* [CSS编码规范[中文]](http://zoomzhao.github.io/code-guide/)
+* [Swift编码规范[英文]](https://github.com/raywenderlich/swift-style-guide)
 
 #### 10. 应用架构规范
 
 * [Android 开发规范与应用](http://www.jianshu.com/p/4390f4fe19b3)
+
+#### 11. 开发调试
+
+* [Charles 从入门到精通(网络封包分析工具)](http://blog.devtang.com/blog/2015/11/14/charles-introduction/)
+
+#### 12. 优化
+
+* [iOS 保持界面流畅的技巧](http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/)
 
 ### 2. 后续实现目标
 
@@ -75,10 +85,13 @@
 
 #### 5. 后台管理系统重构
 
-* 使用Angular
+* 使用Angular.js
 
 #### 6. 客户端的应用架构提升
 
+#### 7. Rest架构的技术选型优化
+
+* [最好的8个Java RESTful框架](http://colobu.com/2015/11/15/best-available-java-restful-micro-frameworks/)
 
 
 
