@@ -45,7 +45,7 @@ id
 match_id      赛事ID
 club_id       球队ID FK -> data_club.id
 club_type     球队类型(1:主队,2:客队)
-event_type    事件类型(0:比赛开始,1:进球,2:助攻,3:红牌,4:黄牌,5:换人,6:比赛结束)
+event_type    事件类型(0:比赛开始,1:进球,2:助攻,3:红牌,4:黄牌,5:换人,6:比赛结束,7:双黄牌)
 event_data    进球数据保存--> {"goalsType":"1","playerName":"张稀哲"} goalsType(1:进球,2:点球,3:乌龙,4:点球未进)
               助攻/红牌/黄牌数据保存--> {"playerName":"张稀哲"}
               换人数据保存--> {"playerUp":"何超","playerDown":"阎峰"}
