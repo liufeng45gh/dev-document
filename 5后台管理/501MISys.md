@@ -72,3 +72,33 @@
 |--| :--|
 |请求方式| GET|
 |请求参数|filters：参数名称集合(如：pageNo,pageSize,onlined,startAt,endAt,title,label,sectionType)<br/>value：参数值集合(如:1,25,true,2015-10-30,2015-12-15,备队,广告,101) |
+
+#### 13.给某场比赛添加一个事件
+|接口地址|http://news.service.9h.com/v1/data/leagues/matches/{match_id}/event|
+|--|--|
+|请求方式|POST|
+|请求参数|match_id：比赛ID|
+
+#### 14.获取/更新/删除某场比赛中的某个事件
+|接口地址|http://news.service.9h.com/v1/data/leagues/matches/{match_id}/event/{match_event_id}|
+|--|--|
+|请求方式|GET、PUT、DELETE|
+|请求参数|match_id：比赛ID；match_event_id：比赛事件ID|
+
+#### 15.获取某场比赛的统计数据
+|接口地址|http://news.service.9h.com/v1/data/leagues/{league_id}/{year}/matches/{match_id}/stat|
+|--|--|
+|请求方式|GET|
+|请求参数|league_id：联赛ID; year：年份; match_id：比赛ID |
+
+#### 16.根据比赛ID和俱乐部类型添加比赛统计数据
+|接口地址|http://news.service.9h.com/v1/data/leagues/matches/{match_id}/stat|
+|--|--|
+|请求方式|POST|
+|请求参数|match_id：比赛ID|
+
+#### 17.获取/更新/删除某场比赛的某条数据
+|接口地址|http://news.service.9h.com/v1/data/leagues/matches/{match_id}/stat/{match_stat_id}|
+|--|--|
+|请求方式|GET、PUT、DELETE|
+|请求参数|match_id：比赛ID;match_stat_id：统计数据ID|
