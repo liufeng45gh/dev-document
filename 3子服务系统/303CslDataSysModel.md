@@ -27,6 +27,7 @@ steal_rate     抢断成功率
 possession     控球率
 fouls          犯规
 yellow_cards   黄牌
+double_y_cards 双黄牌数
 red_cards      红牌
 injury         受伤
 pauses         停顿次数
