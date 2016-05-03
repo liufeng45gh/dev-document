@@ -52,10 +52,7 @@
 ||type_name|教练类型名称(冗余)|
 ||club_history_id|球队历史ID|
 |avatar|avatar|头像|
-||cir_avatar|半身像圆角图|
-||info_avatar|带文字描述的头像|
-||full_avatar|全身像|
-|is_last_served|||
+|is_last_served|is_last_served|是否是最后效力的俱乐部|
 |served_at||效力时间|
 |year|||
 ||end_year|结束年|
@@ -70,7 +67,7 @@
 |nationality|nationality|国籍|
 ||native_place|籍贯（出生地）|
 |region|region|地区(直辖市/省级的粒度)(暂时不删除，但是建议用行政区划)|
-||region_code|行政区划6位编码(备用）|
+||region_code|行政区划6位编码(备用)|
 |birth|birth|生日(用于自动计算年龄)|
 |level|level|级别(1:国家级 2:国际级)|
 |created_at|created_at||
@@ -129,9 +126,6 @@
 |position|position|队内位置，文字描述(门将/后卫/中场/前锋)|
 |position_number|position_number|位置权重，排序用,数字大在前面 1:门将 2:后卫 3 中场  4:前锋;默认为0|
 |avatar|avatar| 球员头像URL(半身像方框)|
-||cir_avatar|半身像圆角图|
-||full_avatar|全身像|
-||info_avatar|带文字描述的头像|
 |weight|weight|球员体重(如: 65 kg)|
 |height|height|球员身高(如: 185 cm)|
 |onfield|onfield|球员在本赛季代表俱乐部的出场次数|
@@ -141,7 +135,7 @@
 ||assist_times|助攻次数|
 ||yellow_times|黄牌次数|
 ||red_times|红牌次数|
-|serial_number|serial_number||
+|serial_number|serial_number|球员参赛编号|
 |updated_at|updated_at||
 |created_at|created_at||
 
@@ -416,4 +410,18 @@
     x               int(11)             x坐标
     y               int(11)             y坐标
     club_type_id    int(11)             主客关系ID
+```
+### 2.15 club_coach_re_club
+```SQL
+    id               bigint(20)         教练关系ID
+    cir_avatar       varchar(255)       半身像圆角图
+    info_avatar      varchar(255)       带文字描述的头像
+    full_avatar      varchar(255)       全身像
+```
+### 2.15 club_player_re_club
+```SQL
+    id               bigint(20) PK      球员俱乐部关系ID
+    cir_avatar       varchar(255)       半身像圆角图
+    full_avatar      varchar(255)       带文字描述的头像
+    info_avatar      varchar(255)       全身像
 ```
