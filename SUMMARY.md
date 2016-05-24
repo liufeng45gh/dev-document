@@ -29,11 +29,16 @@
     * [App管理](3子服务系统/309AppManageSysIntro.md)
     	* [设置类子系统数据模型](3子服务系统/309AppManageSysModel.md)
     	* [设置类子系统接口](3子服务系统/309AppManageSysApi.md)
+    * [随手怕](3子服务系统/311PhotoSysIntro.md)
+    	* [随手拍数据模型](3子服务系统/311PhotoSysModel.md)
+    	* [随手拍子系统接口](3子服务系统/311PhotoSysApi.md)
 * [API网关](4API网关/README.md)
 	* [设计规格](4API网关/401Specific.md)
 	* [网关接口](4API网关/402API.md)
+		* [网关接口随手拍 v3.1](4API网关/402.1API网关随手拍.md)
 	* [网关管理](4API网关/403APIManage.md)
 * [后台管理](5后台管理/README.md)
+
 	* [后台管理](5后台管理/501MISys.md)
 
 * [求球]
