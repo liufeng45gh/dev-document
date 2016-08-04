@@ -79,16 +79,17 @@
 
 | 推送形式 | 推送触发 | 点击打开 | 协议示例 |
 |:----:|:----:|:----:|:----:|
-| 自动推送赛前 | 订阅比赛开始前5分钟 | 打开此比赛详情的阵容Tab | csl://match/live/1/before|
-| 自动推送赛中 | 订阅比赛比分更改 | 打开此比赛详情的事件Tab | csl://match/live/1/underway|
-| 自动推送赛后 | 订阅比赛开始前5分钟 | 打开此比赛详情的统计Tab | csl://match/live/1/after|
+| 自动推送赛前 | 订阅比赛开始前5分钟 | 打开此比赛详情的阵容Tab | csl://match/live/{news_id}/before|
+| 自动推送赛中 | 订阅比赛比分更改 | 打开此比赛详情的事件Tab | csl://match/live/{news_id}/underway|
+| 自动推送赛后 | 订阅比赛结束后 | 打开此比赛详情的统计Tab | csl://match/live/{news_id}/after|
 | 新闻/公告/视频/专家评球内容推送| 友盟后台发送 | 打开新闻html页面 | http://static.news.20160801.html|
-| 运营推送今日赛事 | 友盟后台发送 | 打开赛程列表页面 | csl://matches |
-| 运营推送积分榜 | 友盟后台发送 | 打开积分榜页面 | csl://leaguetable |
-| 【活动】趣味竞猜 | 友盟后台发送 | 打开趣味竞猜首页 | csl://guess |
-| 【活动】幸运转盘 | 友盟后台发送 | 打开幸运转盘首页 | csl://turntable |
-| 【活动】摄影专区 | 友盟后台发送 | 打开摄影专区首页 | csl://photozone |
-| 【活动】全民票选 | 友盟后台发送 | 打开全民票选首页 | csl://vote |
+| 活动新闻页推送| 友盟后台发送 | 打开活动新闻 | csl://news/{news_id} |
+| 运营推送今日赛事 | 友盟后台发送 | 打开赛程列表页面 | csl://match/list |
+| 运营推送积分榜 | 友盟后台发送 | 打开积分榜页面 | csl://match/leaguetable |
+| 【活动】趣味竞猜 | 友盟后台发送 | 打开趣味竞猜首页 | csl://fun/guess |
+| 【活动】幸运转盘 | 友盟后台发送 | 打开幸运转盘首页 | csl://fun/roulette |
+| 【活动】摄影专区 | 友盟后台发送 | 打开摄影专区首页 | csl://fun/easyphoto |
+| 【活动】全民票选 | 友盟后台发送 | 打开全民票选首页 | csl://fun/bestplay |
 	
 
 * 示例：
