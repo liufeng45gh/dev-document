@@ -79,9 +79,9 @@
 
 | 推送形式 | 推送触发 | 点击打开 | 协议示例 |
 |:----:|:----:|:----:|:----:|
-| 自动推送赛前 | 订阅比赛开始前5分钟 | 打开此比赛详情的阵容Tab | csl://match/live/{news_id}/before|
-| 自动推送赛中 | 订阅比赛比分更改 | 打开此比赛详情的事件Tab | csl://match/live/{news_id}/underway|
-| 自动推送赛后 | 订阅比赛结束后 | 打开此比赛详情的统计Tab | csl://match/live/{news_id}/after|
+| 自动推送赛前 | 订阅比赛开始前5分钟 | 打开此比赛详情的阵容Tab | csl://match/live/{match_id}/before|
+| 自动推送赛中 | 订阅比赛比分更改 | 打开此比赛详情的事件Tab | csl://match/live/{match_id}/underway|
+| 自动推送赛后 | 订阅比赛结束后 | 打开此比赛详情的统计Tab | csl://match/live/{match_id}/after|
 | 新闻/公告/视频/专家评球内容推送| 友盟后台发送 | 打开新闻html页面 | http://static.news.20160801.html|
 | 活动新闻页推送| 友盟后台发送 | 打开活动新闻 | csl://news/{news_id} |
 | 运营推送今日赛事 | 友盟后台发送 | 打开赛程列表页面 | csl://match/list |
