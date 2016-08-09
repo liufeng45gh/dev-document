@@ -122,6 +122,9 @@
 	    "device_tokens":"Ak1FNlgp\_lp3YI3FyO9CiQKZftL4UG\_faATQnVdHUKaf"
 	}
 </code></pre>
+	Android图片示例：
+	
+	![Alt text](http://7xldo6.com2.z0.glb.qiniucdn.com/android.jpg)
 
 	<pre><code>
 	 iOS:
@@ -145,6 +148,10 @@
 	    "device_tokens":"Ak1FNlgp_lp3YI3FyO9CiQKZftL4UG_faATQnVdHUKaf"
 	}	
 	</code></pre>
+	
+	iOS图片示例：
+	
+	![Alt text](http://7xldo6.com2.z0.glb.qiniucdn.com/ios.jpg)
 
 
 #### 3.9.2. 短信推送 [+LeanCloud实现]
