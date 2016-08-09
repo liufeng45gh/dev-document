@@ -108,6 +108,25 @@ PUT http://data.service.9h.com/v1/leagues/matches/stat/{matchId}
 }
 ```
 
+#### 6. 接收amisco比赛事件
+POST http://data.service.9h.com/v1/leagues/matches/event
+```
+请求体 : 
+{
+    "matchId":"",
+    "events":[
+        {
+            "eventDate":"",   ----> 事件时间
+            "clubType":"1",   ----> 球队类型(1:主队,2:客队)
+            "eventType":"5",  ----> 事件类型(0:比赛开始,1:进球,2:助攻,3:红牌,4:黄牌一,5:黄牌二，6:换人,7:比赛结束)
+            "eventData":{
+                "playerUpId":"",  ----> 换上球员Id
+                "playerDownId":"" ----> 换下球员Id
+            }
+        }
+    ]
+}
+```
 * * * 
 
 #### 3.4.2.1  获取某位球员的详细资料
