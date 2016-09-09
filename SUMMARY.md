@@ -39,6 +39,7 @@
 	* [设计规格](4API网关/401Specific.md)
 	* [网关接口](4API网关/402API.md)
 		* [网关接口随手拍 v3.1](4API网关/402.1API网关随手拍.md)
+		* [网关竞猜接口](4API网关/402.2API网关竞猜.md)
 	* [网关管理](4API网关/403APIManage.md)
 * [后台管理](5后台管理/README.md)
 
