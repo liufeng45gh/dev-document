@@ -117,11 +117,11 @@ GET http://news.service.9h.com/publish-news/{news_id}
     {...}
 ]
 ```
->例：
-*热门评论 ：http://123.59.84.71/v1/news/publish-news/161/comments?isHot=true
-*全部评论 ：http://123.59.84.71/v1/news/publish-news/161/comments
-*加载更多 ：http://123.59.84.71/v1/news/publish-news/161/comments?history=true&timestamp=1474346566924
-*下拉刷新 ：http://123.59.84.71/v1/news/publish-news/161/comments?refresh=true&timestamp=1474346566924
+> 例：
+* 热门评论 ：http://123.59.84.71/v1/news/publish-news/161/comments?isHot=true
+* 全部评论 ：http://123.59.84.71/v1/news/publish-news/161/comments
+* 加载更多 ：http://123.59.84.71/v1/news/publish-news/161/comments?history=true&timestamp=1474346566924
+* 下拉刷新 ：http://123.59.84.71/v1/news/publish-news/161/comments?refresh=true&timestamp=1474346566924
 
 #### 2.13. 评论某条新闻
 | 接口地址 | http://new.service.9h.com/publish-news/{newsId}/comment|
