@@ -61,5 +61,34 @@ updated_at     更新时间
 ]
 ```
 
+#### 3.2.1.3 资讯评论
+```SQL
+Table news_comment		
 
+id 						唯一主键
+news_publish_id 		新闻Id（关联news_publish表 ID）
+user_id 				用户ID
+content					评论内容
+praise_count			点赞数
+ref_user_id				被回复用户ID
+ref_comment_id			被回复评论ID
+timestamp				保存点赞时间（bigint）
+created_at
+updated_at								
+is_deleted				是否删除（用于软删除）
+delete_reason			删除原因
+```
+
+#### 3.2.1.4  用户与评论的点赞关系
+```SQL
+Table news_comment_praise
+
+id 						唯一主键
+comment_id 				新闻评论ID（关联news_comment表 ID）
+user_id 				用户ID
+timestamp				保存点赞时间（bigint）
+created_at
+updated_at
+is_deleted				是否删除（用于软删除）
+```
 
