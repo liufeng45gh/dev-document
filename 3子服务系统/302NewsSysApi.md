@@ -88,7 +88,7 @@ GET http://news.service.9h.com/publish-news/{news_id}
 | -- | : -- |
 | 请求方式 | GET |
 | 请求参数 |isHot: 是否为热门评论(true或false), 选填<br />refresh: 是否为刷新(true或false)，选填<br />history: 是否为加载历史(true或false)<br />timestamp: 用于刷新和加载，不传入或传入值为null则表示初次加载<br /> commentId: 当从通知中进入评论列表是必填|
-|hearders|X-Page-row，userId|
+|headers|X-Page-row，userId|
 
 返回JSON
 ```
@@ -127,7 +127,7 @@ GET http://news.service.9h.com/publish-news/{news_id}
 | 接口地址 | http://new.service.9h.com/publish-news/{newsId}/comment|
 | -- | : -- |
 | 请求方式 | POST |
-| hearders | userId |
+| headers | userId |
 
 请求体
 ```
@@ -141,4 +141,4 @@ GET http://news.service.9h.com/publish-news/{news_id}
 | 接口地址 | http://new.service.9h.com/publish-news/{newsId}/comments/{commentId}/praise|
 | -- | : -- |
 | 请求方式 | POST |
-| hearders | userId |
+| headers | userId |
