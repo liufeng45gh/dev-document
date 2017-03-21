@@ -53,6 +53,80 @@
 |请求参数|league_id : 联赛Id,必填<br/>year : 联赛年份,必填<br />match_id：比赛Id,必填<br />timestamp：事件最后发生时间,可选|
 |例如|http://123.59.84.71/v1/data/leagues/cls/2015/matches/315/event?timestamp=1458042420000|
 
+#### 5. 接收amisco数据统计
+PUT http://data.service.9h.com/v1/leagues/matches/stat/{matchId}
+```
+请求体 : 
+{
+    "matchId":"",
+    "homeClubId":"",
+    "guestClubId":"",
+    "matchTime":"",
+    "matchStatus":"",// en cours 比赛中 pas commence 比赛为开始 termine 比赛结束
+    "guestClubStat":{
+        "redCards":"0",      ----> cartonRouge
+        "yellowCards":"1",   ----> cartonJaune
+        "fouls":"5",         ----> fauteCommise
+        "toShoot":"10",      ----> tir 
+        "inTarget":"5",      ----> tirCadre
+        "spotKick":"0",      ----> butSurPenalty
+        "passTimes":"125",   ----> passe 
+        "offside":"2",       ----> horsJeu
+        "steal":"15",        ----> 缺少
+        "freeKick":"2",      ----> coupFrancEffectue
+        "corner":"5",        ----> cornerEffectue
+        "outOfBounds":"11",  ----> toucheEffectuee
+        "passCompl":"60",    ----> pctPasseReussie
+        "passMiddle":"50",   ----> 缺少
+        "stealRate":"70",    ----> 缺少
+        "possession":"75",   ----> pctPossession
+        "pauses":"",         ----> 缺少
+        "runningDis":"",     ----> 缺少
+        "realMatchAt":""     ----> tempsEffectif
+    },
+    "homeClubStat":{
+        "redCards":"0",      ----> cartonRouge
+        "yellowCards":"1",   ----> cartonJaune
+        "fouls":"5",         ----> fauteCommise
+        "toShoot":"10",      ----> tir 
+        "inTarget":"5",      ----> tirCadre
+        "spotKick":"0",      ----> butSurPenalty
+        "passTimes":"125",   ----> passe 
+        "offside":"2",       ----> horsJeu
+        "steal":"15",        ----> 缺少
+        "freeKick":"2",      ----> coupFrancEffectue
+        "corner":"5",        ----> cornerEffectue
+        "outOfBounds":"11",  ----> toucheEffectuee
+        "passCompl":"60",    ----> pctPasseReussie
+        "passMiddle":"50",   ----> 缺少
+        "stealRate":"70",    ----> 缺少
+        "possession":"75",   ----> pctPossession
+        "pauses":"",         ----> 缺少
+        "runningDis":"",     ----> 缺少
+        "realMatchAt":""     ----> tempsEffectif
+    }
+}
+```
+
+#### 6. 接收amisco比赛事件
+POST http://data.service.9h.com/v1/leagues/matches/event
+```
+请求体 : 
+{
+    "matchId":"",
+    "events":[
+        {
+            "eventDate":"",   ----> 事件时间
+            "clubType":"1",   ----> 球队类型(1:主队,2:客队)
+            "eventType":"5",  ----> 事件类型(0:比赛开始,1:进球,2:助攻,3:红牌,4:黄牌一,5:黄牌二，6:换人,7:比赛结束)
+            "eventData":{
+                "playerUpId":"",  ----> 换上球员Id
+                "playerDownId":"" ----> 换下球员Id
+            }
+        }
+    ]
+}
+```
 * * * 
 
 #### 3.4.2.1  获取某位球员的详细资料
