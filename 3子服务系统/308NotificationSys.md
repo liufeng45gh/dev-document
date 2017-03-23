@@ -90,8 +90,10 @@
 | 【活动】幸运转盘 | 友盟后台发送 | 打开幸运转盘首页 | csl://fun/roulette |
 | 【活动】摄影专区 | 友盟后台发送 | 打开摄影专区首页 | csl://fun/easyphoto |
 | 【活动】全民票选 | 友盟后台发送 | 打开全民票选首页 | csl://fun/bestplay |
-	
+| 俱乐部新闻 | h5中herf | 打开原生俱乐部新闻界面 | csl://club-news/{club_id}|
+| 新闻评论 | h5中herf | 打开原生新闻评论界面 | csl://news-comments/{news_id}|
 
+	
 * 示例：
 <pre><code>
  Android:
