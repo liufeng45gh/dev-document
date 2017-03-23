@@ -1,5 +1,12 @@
 ### App管理服务接口
 
+-----
+
+#### v3.1 新增接口
+
+#### 程序启动时获取启动图片
+GET http://setting.service.9h.com/app-splash
+
 #### 1.获取快捷导航设置列表(未实现)
 
 GET  http://setting.service.9h.com/app-navibars
