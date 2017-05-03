@@ -22,6 +22,112 @@
 
 ### 3.4.2. 数据服务接口
 
+#### V3.5新增数据接口
+
+
+#### 1.获取某年球员的技术统计
+|接口地址|http://data.service.9h.com/stat/{year}/players|
+|--|:--|
+|请方式|GET|
+|请求参数|year : 联赛年份,必填<br />targetId: 技术数据类型,可选<br />round: 轮次，可选|
+返回JSON
+```
+{
+    "oper_code":"1",
+    "httpStatus":"200",
+    "message":"success",
+    "data":{
+        "statList":[
+            {
+                "playerStatId":"",      --> 唯一ID
+                "playerId":"",          --> 球员ID
+                "playerName":"",        --> 球员名称
+                "clubId":"",            --> 俱乐部ID
+                "clubName":"",          --> 俱乐部名称
+                "typeId":"",            --> 技术统计类型ID
+                "typeValue":"",         --> 技术统计数据
+                "round":"",             --> 轮次
+                "ranking":"",           --> 排名
+                "year":"",              --> 年份
+                "displayOrder":"",      --> 排序权重
+                "createdAt":"",         --> 创建时间
+                "updatedAt":"",         --> 更新时间
+                "isDeleted":""          --> 是否删除
+            },
+            ...
+        ],
+        "typeList":[
+            {
+                "typeId":"1",            --> 唯一ID
+                "name":"射手榜排名",     --> 侧边栏名称
+                "displayOrder":"20",     --> 排序权重
+                "createdAt":"",          --> 创建时间
+                "updatedAt":"",          --> 更新时间
+                "isDeleted":"",          --> 是否删除
+                "titleList":[            --> 属性名
+                    "排名",
+                    "球员",
+                    "球队",
+                    "进球数(点球)"
+                ]
+            },
+         ...
+        ]
+    }
+}
+```
+
+#### 2.获取某年球队的技术统计
+|接口地址|http://data.service.9h.com/stat/{year}/clubs|
+|--|:--|
+|请方式|GET|
+|请求参数|year : 联赛年份,必填<br />targetId: 技术数据类型,可选<br />round: 轮次，可选|
+返回JSON
+```
+{
+    "oper_code":"1",
+    "httpStatus":"200",
+    "message":"success",
+    "data":{
+        "statList":[
+            {
+                "clubStatId":"",    --> 唯一ID
+                "clubId":"",        --> 俱乐部ID
+                "typeId":"",        --> 技术统计ID
+                "typeValue":"",     --> 技术统计数据
+                "year":"",          --> 年份
+                "round":"",         --> 轮次
+                "ranking":"",       --> 排名
+                "displayOrder":"",  --> 排序权重
+                "createdAt":"",     --> 创建时间
+                "updatedAt":"",     --> 更新时间
+                "clubLogo":"",      --> 俱乐部logo
+                "clubName":"",      --> 俱乐部名字
+                "isDeleted":""      --> 是否删除
+            }
+        ],
+        "typeList":[
+            {
+                "typeId":"2",       --> 唯一ID
+                "name":"净比赛时间",--> 侧边栏名称
+                "displayOrder":"18",--> 排序权重
+                "createdAt":"",     --> 创建时间
+                "updatedAt":"",     --> 更新时间
+                "isDeleted":"",     --> 是否删除
+                "titleList":[       --> 属性名
+                    "排名",
+                    "球队",
+                    "净比赛时间"
+                ]
+            },
+            ...
+        ]
+    }
+}
+```
+
+
+
 #### 第二版新增数据接口
 
 

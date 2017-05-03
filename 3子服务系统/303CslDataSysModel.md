@@ -1,5 +1,68 @@
 ### 3.4.1. 数据模型
 
+### V3.5新增数据模型
+
+#### 1. 球员技术统计类型
+```SQL
+Table data_player_stat_target
+id 
+name			类型名称
+title 			类型标题(排名，球员，进球)
+display_order	排序权重
+created_at
+updated_at
+is_deleted
+```
+
+#### 2. 球员技术统计
+```SQL
+Table data_player_stat
+id
+player_id		球员ID FK ->data_player.id
+player_name		球员名称(冗余)
+club_id			俱乐部ID FK ->data_club.id
+club_name		俱乐部名称(冗余)
+target_id		类型ID FK ->data_player_stat_target.id 
+target_value	数据
+round			轮次
+rank			排名
+year			年份
+display_order	排序权重
+created_at		
+updated_at
+is_deleted
+```
+
+#### 3. 俱乐部技术统计类型
+```SQL
+Table data_club_stat_target
+id 
+name			类型名称
+title 			类型标题(排名，球员，进球)
+display_order	排序权重
+created_at
+updated_at
+is_deleted
+```
+
+#### 4. 俱乐部技术统计
+```SQL
+Table data_club_stat
+id
+club_id			俱乐部ID FK ->data_club.id
+club_name		俱乐部名称(冗余)
+club_logo		俱乐部logo(冗余)
+target_id		类型ID FK ->data_player_stat_target.id 
+target_value	数据
+round			轮次
+rank			排名
+year			年份
+display_order	排序权重
+created_at		
+updated_at
+is_deleted
+```
+
 #### 第二版新增数据模型
 
 #### 1. 比赛统计

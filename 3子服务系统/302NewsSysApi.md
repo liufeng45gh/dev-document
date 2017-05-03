@@ -41,7 +41,7 @@
 | 接口地址 | http://news.service.9h.com/publish-news/onlined|
 | -- | : -- |
 | 请求方式 | GET |
-| 请求参数 | section_type : 频道类型, 必填<br /> timestamp : 时间戳(下拉刷新和历史加载必填)<br /> method_type : 操作类型(init,refresh,history) 必填<br /> pageSize : 每页行数 , 可选|
+| 请求参数 | section_type : 频道类型, 必填<br /> timestamp : 时间戳(下拉刷新和历史加载必填)<br /> method_type : 操作类型(init,refresh,history) 必填<br /> pageSize : 每页行数 , 可选<br /> annType ：公告类型，可选|
 
 > 可选参数
 * section_type (频道类型)
