@@ -1,4 +1,6 @@
 # Summary
+* [代码规范]
+	* [规范](0前言/001CodeRule.md)
 * [产品设计](1产品设计/README.md)
 	* [功能](1产品设计/101ProductDesign.md)
 * [研发设计](2概要设计/README.md)
