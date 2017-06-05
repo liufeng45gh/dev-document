@@ -92,6 +92,7 @@
 | 【活动】全民票选 | 友盟后台发送 | 打开全民票选首页 | csl://fun/bestplay |
 | 俱乐部新闻 | h5中herf | 打开原生俱乐部新闻界面 | csl://club-news/{club_id}|
 | 新闻评论 | h5中herf | 打开原生新闻评论界面 | csl://news-comments/{news_id}|
+| 物品列表 | h5中herf | 打开原生物品列表界面 | csl://item/list|
 
 	
 * 示例：
